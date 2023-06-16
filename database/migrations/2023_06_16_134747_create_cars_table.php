@@ -16,13 +16,13 @@ return new class extends Migration
             $table->string('car_name');
             $table->string('brand_type');
             $table->string('fuel_type');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->string('fee');
             $table->string('description');
             $table->timestamps();
         });
 
-      
+
     }
 
     /**

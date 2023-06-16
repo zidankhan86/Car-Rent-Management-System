@@ -12,6 +12,12 @@ class BrandController extends Controller
     }
 public function brandStore(Request $request){
 
+    $request->validate([
+        'brand_name' => 'required|string|max:255',
+        'brand_type' => 'required|string|max:255',
+    ]);
+
+
     //dd($request->all());
 
     Brand::create([

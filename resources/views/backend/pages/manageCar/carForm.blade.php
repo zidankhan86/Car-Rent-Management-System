@@ -22,7 +22,7 @@
 
     @csrf
     <div class="form-group">
-      <label for="exampleInputEmail1">Car Name</label>
+      <label for="exampleInputName">Car Name</label>
       <input type="text" class="form-control" name="car_name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Brand Name">
 
     </div>
@@ -38,13 +38,13 @@
 
       <div class="form-group">
         <label for="exampleInputPassword1">Car Image</label>
-        <input type="text" class="form-control" name="image" id="exampleInputPassword1" placeholder="Brand Type Name">
+        <input type="file" class="form-control" name="image" id="exampleInputPassword1" placeholder="Brand Type Name">
       </div>
 
 
       <div class="form-group">
         <label for="exampleInputPassword1">Rent Fee</label>
-        <input type="text" class="form-control" name="fee" id="exampleInputPassword1" placeholder="Brand Type Name">
+        <input type="number" class="form-control" name="fee" id="exampleInputPassword1" placeholder="Brand Type Name">
       </div>
 
 
