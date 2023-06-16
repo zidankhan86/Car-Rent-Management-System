@@ -27,6 +27,8 @@
   <link rel="stylesheet" href="{{url ('../assets/styles/app.css') }}" type="text/css" />
   <!-- endbuild -->
   <link rel="stylesheet" href="{{url ('../assets/styles/font.css') }}" type="text/css" />
+
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
   <div class="app" id="app">

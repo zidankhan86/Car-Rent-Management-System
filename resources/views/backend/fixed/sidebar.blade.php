@@ -22,9 +22,7 @@
               <li>
                 <a href="dashboard.html" >
                   <span class="nav-icon">
-                    <i class="material-icons">&#xe3fc;
-                      <span ui-include="'../assets/images/i_0.svg'"></span>
-                    </i>
+
                   </span>
                   <span class="nav-text">Dashboard</span>
                 </a>
@@ -39,9 +37,7 @@
                     <b class="label rounded label-sm primary">5</b>
                   </span>
                   <span class="nav-icon">
-                    <i class="material-icons">&#xe5c3;
-                      <span ui-include="'../assets/images/i_1.svg'"></span>
-                    </i>
+
                   </span>
                   <span class="nav-text">Brands</span>
                 </a>
@@ -69,52 +65,23 @@
                   <span class="nav-caret">
                     <i class="fa fa-caret-down"></i>
                   </span>
-                  <span class="nav-icon">
-                    <i class="material-icons">&#xe8f0;
-                      <span ui-include="'../assets/images/i_2.svg'"></span>
-                    </i>
-                  </span>
+
                   <span class="nav-text">Manage Car</span>
                 </a>
-                <ul class="nav-sub">
-                  <li>
-                    <a href="headers.html" >
-                      <span class="nav-text">Header</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="asides.html" >
-                      <span class="nav-text">Aside</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="footers.html" >
-                      <span class="nav-text">Footer</span>
-                    </a>
-                  </li>
-                </ul>
               </li>
 
               <li>
                 <a href="widget.html" >
                   <span class="nav-icon">
-                    <i class="material-icons">&#xe8d2;
-                      <span ui-include="'../assets/images/i_3.svg'"></span>
-                    </i>
+
                   </span>
                   <span class="nav-text">Manage Booking</span>
                 </a>
               </li>
-
-
-
-
               <li>
                 <a href="widget.html" >
                   <span class="nav-icon">
-                    <i class="material-icons">&#xe8d2;
-                      <span ui-include="'../assets/images/i_3.svg'"></span>
-                    </i>
+                    
                   </span>
                   <span class="nav-text">Upload Content</span>
                 </a>
@@ -124,9 +91,7 @@
               <li>
                 <a href="widget.html" >
                   <span class="nav-icon">
-                    <i class="material-icons">&#xe8d2;
-                      <span ui-include="'../assets/images/i_3.svg'"></span>
-                    </i>
+
                   </span>
                   <span class="nav-text">Manage Customer</span>
                 </a>
