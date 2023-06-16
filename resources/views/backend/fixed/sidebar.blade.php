@@ -20,7 +20,7 @@
               </li>
 
               <li>
-                <a href="dashboard.html" >
+                <a href="{{ route('dashboard') }}" >
                   <span class="nav-icon">
 
                   </span>
@@ -29,21 +29,13 @@
               </li>
 
               <li>
-                <a>
-                  <span class="nav-caret">
-                    <i class="fa fa-caret-down"></i>
-                  </span>
-                  <span class="nav-label">
-                    <b class="label rounded label-sm primary">5</b>
-                  </span>
-                  <span class="nav-icon">
-
+                <a href="{{ route('brand.form') }}">
                   </span>
                   <span class="nav-text">Brands</span>
                 </a>
                 <ul class="nav-sub">
                   <li>
-                    <a href="inbox.html" >
+                    <a href="" >
                       <span class="nav-text">Manage Car</span>
                     </a>
                   </li>
@@ -81,7 +73,7 @@
               <li>
                 <a href="widget.html" >
                   <span class="nav-icon">
-                    
+
                   </span>
                   <span class="nav-text">Upload Content</span>
                 </a>
@@ -100,19 +92,7 @@
             </ul>
         </nav>
     </div>
-    <div class="b-t">
-      <div class="nav-fold">
-          <a href="profile.html">
-              <span class="pull-left">
-                <img src="../assets/images/a0.jpg" alt="..." class="w-40 img-circle">
-              </span>
-              <span class="clear hidden-folded p-x">
-                <span class="block _500">Jean Reyes</span>
-                <small class="block text-muted"><i class="fa fa-circle text-success m-r-sm"></i>online</small>
-              </span>
-          </a>
-      </div>
-    </div>
+
   </div>
 </div>
 <!-- / -->

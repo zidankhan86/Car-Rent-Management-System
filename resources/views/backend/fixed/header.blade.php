@@ -12,15 +12,7 @@
         <!-- navbar collapse -->
         <div class="collapse navbar-collapse" id="collapse">
           <!-- link and dropdown -->
-          <ul class="nav navbar-nav mr-auto">
-            <li class="nav-item dropdown">
-              <a class="nav-link" href data-toggle="dropdown">
-                <i class="fa fa-fw fa-plus text-muted"></i>
-                <span>New</span>
-              </a>
-              <div ui-include="'../views/blocks/dropdown.new.html'"></div>
-            </li>
-          </ul>
+          
 
           <div ui-include="'../views/blocks/navbar.form.html'"></div>
           <!-- / -->
