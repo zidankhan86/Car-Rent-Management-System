@@ -2,25 +2,29 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
 use App\Models\Car;
 use Illuminate\Http\Request;
 
 class CarController extends Controller
 {
     public function addCar(){
-        return view('backend.pages.manageCar.carForm');
+
+        $brands=Brand::all();
+        return view('backend.pages.manageCar.carForm',compact('brands'));
     }
 
     public function CarStore(Request $request){
+        dd($request->all());
 
-        $request->validate([
-            'car_name' => 'required|string|max:255',
-            'brand_type' => 'required|string|max:255',
-            'fuel_type' => 'required|string|max:255',
-             // Assuming it's an image file
-            'fee' => 'required|numeric',
-            'description' => 'required|string',
-        ]);
+
+        // $request->validate([
+        //     'car_name' => 'required|string|max:255',
+        //     'fuel_type' => 'required|string|max:255',
+        //      // Assuming it's an image file
+        //     'fee' => 'required|numeric',
+        //     'description' => 'required|string',
+        // ]);
 
 
 
@@ -32,12 +36,11 @@ class CarController extends Controller
 
         //dd($imageName);
 
-        //dd($request->all());
+
 
         Car::create([
-
+            "brand_id" =>$request->brand_id,
             "car_name" =>$request->car_name,
-            "brand_type" =>$request->brand_type,
             "fuel_type" =>$request->fuel_type,
             "image" =>$imageName,
             "fee" =>$request->fee,

@@ -9,4 +9,8 @@ class Car extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    public function CarRelation(){
+        return $this->belongsTo(Brand::class,'brand_id','id');
+    }
 }

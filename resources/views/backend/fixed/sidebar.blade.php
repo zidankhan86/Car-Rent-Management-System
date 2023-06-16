@@ -40,7 +40,6 @@
                 </div>
 
 
-
                 <a class="nav-link" href="charts.html">
                     <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                      Booking
@@ -48,6 +47,11 @@
                 <a class="nav-link" href="tables.html">
                     <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                     Manage Customer
+                </a>
+
+                <a class="nav-link" href="tables.html">
+                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                    Upload  Content
                 </a>
             </div>
         </div>
