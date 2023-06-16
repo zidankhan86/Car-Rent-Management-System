@@ -1,6 +1,8 @@
 @extends('backend.master')
 
+
 @section('content')
+<br><br><h4>Brand Table</h4>
 <table class="table">
     <thead>
       <tr>

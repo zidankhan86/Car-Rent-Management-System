@@ -1,6 +1,8 @@
 @extends('backend.master')
 
 @section('content')
+
+<p class="btn btn-success">Car List</p>
 <table class="table">
     <thead>
       <tr>

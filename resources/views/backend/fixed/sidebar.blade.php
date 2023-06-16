@@ -16,7 +16,7 @@
                 <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
                         <a class="nav-link" href="{{ route('brand.form') }}">Add Brands</a>
-                        <a class="nav-link" href="layout-sidenav-light.html">Brand List</a>
+                        <a class="nav-link" href="{{ route('brand.table') }}">Brand List</a>
                     </nav>
                 </div>
 
@@ -32,7 +32,7 @@
                             Add Car
                         </a>
 
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                        <a class="nav-link collapsed" href="{{ route('car.table') }}" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
                             Car List
                         </a>
 

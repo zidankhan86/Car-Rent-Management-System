@@ -48,4 +48,8 @@ class CarController extends Controller
         return back();
 
     }
+
+    public function CarTable(){
+        return view('backend.pages.manageCar.carList');
+    }
 }

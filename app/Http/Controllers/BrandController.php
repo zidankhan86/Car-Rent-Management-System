@@ -30,6 +30,10 @@ public function brandStore(Request $request){
 
 }
 
+public function brandTable(){
+    return view('backend.pages.brand.brandList');
+}
+
 
 
 }

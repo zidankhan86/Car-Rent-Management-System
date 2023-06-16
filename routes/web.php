@@ -24,6 +24,8 @@ Route::get('/', function () {
 Route::get('/',[HomeController::class,'dashboard'])->name('dashboard');
 Route::get('/add/brand/form',[BrandController::class,'brandForm'])->name('brand.form');
 Route::post('/add/brand/store',[BrandController::class,'brandStore'])->name('brand.store');
+Route::get('/brand/table',[BrandController::class,'brandTable'])->name('brand.table');
 
  Route::get('/car/rent/form',[CarController::class,'addCar'])->name('car.form');
  Route::post('/car/rent/form',[CarController::class,'CarStore'])->name('car.store');
+ Route::get('/car/rent/table',[CarController::class,'CarTable'])->name('car.table');
