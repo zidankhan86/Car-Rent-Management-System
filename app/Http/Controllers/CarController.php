@@ -15,16 +15,15 @@ class CarController extends Controller
     }
 
     public function CarStore(Request $request){
-        dd($request->all());
+        //dd($request->all());
 
 
-        // $request->validate([
-        //     'car_name' => 'required|string|max:255',
-        //     'fuel_type' => 'required|string|max:255',
-        //      // Assuming it's an image file
-        //     'fee' => 'required|numeric',
-        //     'description' => 'required|string',
-        // ]);
+        $request->validate([
+            'car_name' => 'required|string|max:255',
+            'fuel_type' => 'required|string|max:255',
+            'fee' => 'required|numeric',
+            'description' => 'required|string',
+        ]);
 
 
 

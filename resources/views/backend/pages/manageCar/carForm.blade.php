@@ -30,19 +30,12 @@
 
     <div class="form-group">
         <label>Brand Type</label>
-
-
         <select name="brand_id" id="" class="form-control">
-
             @foreach ($brands as $brand)
-
             <option value="{{$brand->id}}">{{$brand->brand_type}}</option>
-
             @endforeach
-
         </select>
       </div>
-
 
     <div class="form-group">
         <label for="exampleInputPassword1">Fuel Type</label>
