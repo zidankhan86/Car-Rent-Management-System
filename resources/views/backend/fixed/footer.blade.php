@@ -1,12 +1,12 @@
-<div class="app-footer">
-    <div class="p-2 text-xs">
-      <div class="pull-right text-muted py-1">
-        &copy; Copyright <strong>Flatkit</strong> <span class="hidden-xs-down">- Built with Love v1.1.3</span>
-        <a ui-scroll-to="content"><i class="fa fa-long-arrow-up p-x-sm"></i></a>
-      </div>
-      <div class="nav">
-        <a class="nav-link" href="../">About</a>
-        <a class="nav-link" href="http://themeforest.net/user/flatfull/portfolio?ref=flatfull">Get it</a>
-      </div>
+<footer class="py-4 bg-light mt-auto">
+    <div class="container-fluid px-4">
+        <div class="d-flex align-items-center justify-content-between small">
+            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+            <div>
+                <a href="#">Privacy Policy</a>
+                &middot;
+                <a href="#">Terms &amp; Conditions</a>
+            </div>
+        </div>
     </div>
-  </div>
+</footer>

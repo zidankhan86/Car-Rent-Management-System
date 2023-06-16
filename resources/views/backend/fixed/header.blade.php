@@ -1,48 +1,25 @@
-<div class="app-header white box-shadow">
-    <div class="navbar navbar-toggleable-sm flex-row align-items-center">
-        <!-- Open side - Naviation on mobile -->
-        <a data-toggle="modal" data-target="#aside" class="hidden-lg-up mr-3">
-          <i class="material-icons">&#xe5d2;</i>
-        </a>
-        <!-- / -->
-
-        <!-- Page title - Bind to $state's title -->
-        <div class="mb-0 h5 no-wrap" ng-bind="$state.current.data.title" id="pageTitle"></div>
-
-        <!-- navbar collapse -->
-        <div class="collapse navbar-collapse" id="collapse">
-          <!-- link and dropdown -->
-          
-
-          <div ui-include="'../views/blocks/navbar.form.html'"></div>
-          <!-- / -->
+<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+    <!-- Navbar Brand-->
+    <a class="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
+    <!-- Sidebar Toggle-->
+    <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+    <!-- Navbar Search-->
+    <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+        <div class="input-group">
+            <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+            <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
         </div>
-        <!-- / navbar collapse -->
-
-        <!-- navbar right -->
-        <ul class="nav navbar-nav ml-auto flex-row">
-          <li class="nav-item dropdown pos-stc-xs">
-            <a class="nav-link mr-2" href data-toggle="dropdown">
-              <i class="material-icons">&#xe7f5;</i>
-              <span class="label label-sm up warn">3</span>
-            </a>
-            <div ui-include="'../views/blocks/dropdown.notification.html'"></div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link p-0 clear" href="#" data-toggle="dropdown">
-              <span class="avatar w-32">
-                <img src="../assets/images/a0.jpg" alt="...">
-                <i class="on b-white bottom"></i>
-              </span>
-            </a>
-            <div ui-include="'../views/blocks/dropdown.user.html'"></div>
-          </li>
-          <li class="nav-item hidden-md-up">
-            <a class="nav-link pl-2" data-toggle="collapse" data-target="#collapse">
-              <i class="material-icons">&#xe5d4;</i>
-            </a>
-          </li>
-        </ul>
-        <!-- / navbar right -->
-    </div>
-</div>
+    </form>
+    <!-- Navbar-->
+    <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#!">Settings</a></li>
+                <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#!">Logout</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>

@@ -4,58 +4,50 @@
 
 
 
-<div class="p-a white lt box-shadow">
-	<div class="row">
-		<div class="col-sm-6">
-			<h4 class="mb-0 _300">Welcome to Car Rent Management System</h4>
-			<small class="text-muted">Our main <strong>Goal</strong> is best car rent service </small>
-		</div>
-
-	</div>
-</div>
-<div class="padding">
-	<div class="row">
-		<div class="col-xs-12 col-sm-4">
-	        <div class="box p-a">
-	          <div class="pull-left m-r">
-	            <span class="w-48 rounded  accent">
-	              <i class="material-icons">&#xe151;</i>
-	            </span>
-	          </div>
-	          <div class="clear">
-	            <h4 class="m-0 text-lg _300"><a href>125 <span class="text-sm">Emails</span></a></h4>
-	            <small class="text-muted">6 new arrivals.</small>
-	          </div>
-	        </div>
-	    </div>
-	    <div class="col-xs-6 col-sm-4">
-	        <div class="box p-a">
-	          <div class="pull-left m-r">
-	            <span class="w-48 rounded primary">
-	              <i class="material-icons">&#xe54f;</i>
-	            </span>
-	          </div>
-	          <div class="clear">
-	            <h4 class="m-0 text-lg _300"><a href>40 <span class="text-sm">Projects</span></a></h4>
-	            <small class="text-muted">38 open.</small>
-	          </div>
-	        </div>
-	    </div>
-	    <div class="col-xs-6 col-sm-4">
-	        <div class="box p-a">
-	          <div class="pull-left m-r">
-	            <span class="w-48 rounded warn">
-	              <i class="material-icons">&#xe8d3;</i>
-	            </span>
-	          </div>
-	          <div class="clear">
-	            <h4 class="m-0 text-lg _300"><a href>600 <span class="text-sm">Users</span></a></h4>
-	            <small class="text-muted">632 vips.</small>
-	          </div>
-	        </div>
-	    </div>
-	</div>
-
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Dashboard</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">Dashboard</li>
+    </ol>
+    <div class="row">
+        <div class="col-xl-3 col-md-6">
+            <div class="card bg-primary text-white mb-4">
+                <div class="card-body">Primary Card</div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a class="small text-white stretched-link" href="#">View Details</a>
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="card bg-warning text-white mb-4">
+                <div class="card-body">Warning Card</div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a class="small text-white stretched-link" href="#">View Details</a>
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="card bg-success text-white mb-4">
+                <div class="card-body">Success Card</div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a class="small text-white stretched-link" href="#">View Details</a>
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="card bg-danger text-white mb-4">
+                <div class="card-body">Danger Card</div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a class="small text-white stretched-link" href="#">View Details</a>
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
 
 </div>
 

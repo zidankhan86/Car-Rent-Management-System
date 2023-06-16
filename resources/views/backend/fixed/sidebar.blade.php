@@ -1,98 +1,57 @@
-<!-- aside -->
-<div id="aside" class="app-aside modal nav-dropdown">
-    <!-- fluid app aside -->
-  <div class="left navside dark dk" data-layout="column">
-      <div class="navbar no-radius">
-      <!-- brand -->
-      <a class="navbar-brand">
-          <div ui-include="'../assets/images/logo.svg'"></div>
-          <img src="../assets/images/logo.png" alt="." class="hide">
-          <span class="hidden-folded inline">Car Rent</span>
-      </a>
-      <!-- / brand -->
-    </div>
-    <div class="hide-scroll" data-flex>
-        <nav class="scroll nav-light">
-
-            <ul class="nav" ui-nav>
-              <li class="nav-header hidden-folded">
-                <small class="text-muted">Main</small>
-              </li>
-
-              <li>
-                <a href="{{ route('dashboard') }}" >
-                  <span class="nav-icon">
-
-                  </span>
-                  <span class="nav-text">Dashboard</span>
+<div id="layoutSidenav_nav">
+    <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+        <div class="sb-sidenav-menu">
+            <div class="nav">
+                <div class="sb-sidenav-menu-heading">Core</div>
+                <a class="nav-link" href="index.html">
+                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    Dashboard
                 </a>
-              </li>
-
-              <li>
-                <a href="{{ route('brand.form') }}">
-                  </span>
-                  <span class="nav-text">Brands</span>
+                <div class="sb-sidenav-menu-heading">Main</div>
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                    Brands
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
-                <ul class="nav-sub">
-                  <li>
-                    <a href="" >
-                      <span class="nav-text">Manage Car</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="contact.html" >
-                      <span class="nav-text">Contacts</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="calendar.html" >
-                      <span class="nav-text">Calendar</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                <a>
-                  <span class="nav-caret">
-                    <i class="fa fa-caret-down"></i>
-                  </span>
-
-                  <span class="nav-text">Manage Car</span>
+                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="{{ route('brand.form') }}">Add Brands</a>
+                        <a class="nav-link" href="layout-sidenav-light.html">Brand List</a>
+                    </nav>
+                </div>
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                    <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                    Manage Car
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
-              </li>
+                <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                            Add Car
+                        </a>
 
-              <li>
-                <a href="widget.html" >
-                  <span class="nav-icon">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                            Car List
+                        </a>
 
-                  </span>
-                  <span class="nav-text">Manage Booking</span>
+                    </nav>
+                </div>
+
+
+
+                <a class="nav-link" href="charts.html">
+                    <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                     Booking
                 </a>
-              </li>
-              <li>
-                <a href="widget.html" >
-                  <span class="nav-icon">
-
-                  </span>
-                  <span class="nav-text">Upload Content</span>
+                <a class="nav-link" href="tables.html">
+                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                    Manage Customer
                 </a>
-              </li>
-
-
-              <li>
-                <a href="widget.html" >
-                  <span class="nav-icon">
-
-                  </span>
-                  <span class="nav-text">Manage Customer</span>
-                </a>
-              </li>
-
-            </ul>
-        </nav>
-    </div>
-
-  </div>
+            </div>
+        </div>
+        <div class="sb-sidenav-footer">
+            <div class="small">Logged in as:</div>
+            Start Bootstrap
+        </div>
+    </nav>
 </div>
-<!-- / -->

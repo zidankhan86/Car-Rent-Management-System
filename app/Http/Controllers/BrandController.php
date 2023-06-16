@@ -12,7 +12,7 @@ class BrandController extends Controller
     }
 public function brandStore(Request $request){
 
-    dd($request->all());
+    //dd($request->all());
 
     Brand::create([
 

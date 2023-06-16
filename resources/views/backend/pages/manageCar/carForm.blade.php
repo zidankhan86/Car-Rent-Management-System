@@ -32,6 +32,11 @@
         <input type="text" class="form-control" name="brand_type" id="exampleInputPassword1" placeholder="Brand Type Name">
       </div>
 
+      <textarea class="form-control" name="" id="" cols="30" rows="10">
+        Description
+      </textarea>
+
+
 
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
