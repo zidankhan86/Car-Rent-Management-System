@@ -26,3 +26,4 @@ Route::get('/add/brand/form',[BrandController::class,'brandForm'])->name('brand.
 Route::post('/add/brand/store',[BrandController::class,'brandStore'])->name('brand.store');
 
  Route::get('/car/rent/form',[CarController::class,'addCar'])->name('car.form');
+ Route::post('/car/rent/form',[CarController::class,'CarStore'])->name('car.store');
