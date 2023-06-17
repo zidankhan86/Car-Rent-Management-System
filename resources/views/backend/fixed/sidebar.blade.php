@@ -49,7 +49,7 @@
                     Manage Customer
                 </a>
 
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="{{route('content.form')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                     Upload  Content
                 </a>

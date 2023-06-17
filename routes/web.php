@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\ContentController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,3 +30,7 @@ Route::get('/brand/table',[BrandController::class,'brandTable'])->name('brand.ta
  Route::get('/car/rent/form',[CarController::class,'addCar'])->name('car.form');
  Route::post('/car/rent/form',[CarController::class,'CarStore'])->name('car.store');
  Route::get('/car/rent/table',[CarController::class,'CarTable'])->name('car.table');
+
+
+ Route::get('/content',[ContentController::class,'contentForm'])->name('content.form');
+ Route::post('/content-store',[ContentController::class,'contentStore'])->name('content.store');
