@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CarController;
-use App\Http\Controllers\ContentController;
+use App\Http\Controllers\frontend\HomeController as FrontendHomeController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,12 +17,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/',[FrontendHomeController::class,'home'])->name('home');
 
 
-Route::get('/',[HomeController::class,'dashboard'])->name('dashboard');
+
+
+
+
+Route::get('/admin',[HomeController::class,'dashboard'])->name('dashboard');
 Route::get('/add/brand/form',[BrandController::class,'brandForm'])->name('brand.form');
 Route::post('/add/brand/store',[BrandController::class,'brandStore'])->name('brand.store');
 Route::get('/brand/table',[BrandController::class,'brandTable'])->name('brand.table');
@@ -32,6 +35,8 @@ Route::get('/brand/table',[BrandController::class,'brandTable'])->name('brand.ta
  Route::get('/car/rent/table',[CarController::class,'CarTable'])->name('car.table');
 
 
- Route::get('/content',[ContentController::class,'contentForm'])->name('content.form');
- Route::post('/content-store',[ContentController::class,'contentStore'])->name('content.store');
- Route::get('/content/list',[ContentController::class,'contentList'])->name('content.list');
+ //Route::get('/content',[ContentController::class,'contentForm'])->name('content.form');
+ //Route::post('/content-store',[ContentController::class,'contentStore'])->name('content.store');
+ //Route::get('/content/list',[ContentController::class,'contentList'])->name('content.list');
+
+
