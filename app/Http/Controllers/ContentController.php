@@ -34,7 +34,7 @@ class ContentController extends Controller
 
     public function contentList(){
 
-        $content = Content::all();
+        $content = Content::simplePaginate(5);
         return view('backend.pages.content.contentList',compact('content'));
     }
 }

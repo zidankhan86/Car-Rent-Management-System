@@ -35,7 +35,7 @@
 
     </tbody>
   </table>
-
+  {{$content->links()}}
 
 
 @endsection
