@@ -50,6 +50,8 @@ class CarController extends Controller
     }
 
     public function CarTable(){
-        return view('backend.pages.manageCar.carList');
+
+        $cars = Car::all();
+        return view('backend.pages.manageCar.carList',compact('cars'));
     }
 }
