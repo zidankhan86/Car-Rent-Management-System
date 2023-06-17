@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\CarRentController;
 use App\Http\Controllers\frontend\HomeController as FrontendHomeController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -19,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/',[FrontendHomeController::class,'home'])->name('home');
-
+Route::get('/car-rent',[CarRentController::class,'carRent'])->name('car.rent');
 
 
 
