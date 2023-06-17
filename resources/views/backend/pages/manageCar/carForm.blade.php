@@ -18,6 +18,7 @@
   </style>
 
 <p class="btn btn-success">Add Car</p>
+{{-- <p class="btn btn-success">Add Car</p> --}}
 <form action="{{ route('car.store') }}" method="post" enctype="multipart/form-data">
 
     @csrf
