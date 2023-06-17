@@ -2,7 +2,7 @@
 @extends('backend.master')
 
 @section('content')
-<p class="btn btn-success">Add Content</p>
+<br><br><h3 class="text-success">Content Form</h3><br>
 <form action="{{ route('content.store') }}" method="post" enctype="multipart/form-data">
 
     @csrf
@@ -19,7 +19,7 @@
     <div class="form-group">
         <label for="exampleInputPassword1">Description</label>
         <input type="text" class="form-control" name="description" id="exampleInputPassword1" placeholder="Description">
-      </div>
+      </div><br>
 
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>

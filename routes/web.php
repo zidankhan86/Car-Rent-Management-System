@@ -34,3 +34,4 @@ Route::get('/brand/table',[BrandController::class,'brandTable'])->name('brand.ta
 
  Route::get('/content',[ContentController::class,'contentForm'])->name('content.form');
  Route::post('/content-store',[ContentController::class,'contentStore'])->name('content.store');
+ Route::get('/content/list',[ContentController::class,'contentList'])->name('content.list');

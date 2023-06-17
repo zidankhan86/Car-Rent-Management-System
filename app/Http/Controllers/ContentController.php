@@ -31,4 +31,10 @@ class ContentController extends Controller
         return back();
 
     }
+
+    public function contentList(){
+
+        $content = Content::all();
+        return view('backend.pages.content.contentList',compact('content'));
+    }
 }
