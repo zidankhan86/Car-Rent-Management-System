@@ -8,62 +8,34 @@
             <div class="col-lg-12">
                 <div class="section-title center-title">
                     <span>Get Special Offer</span>
-                    <h2>Our Pricing</h2>
+                    <h2>Our Service</h2>
                 </div>
             </div>
         </div>
         <div class="row">
+
+
+            @foreach ($cars as $car)
+
+
+
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="pricing__item">
                     <div class="pricing__item__title">
-                        <span>20% off</span>
-                        <h2>$ 199</h2>
-                        <h5>Personal Driving</h5>
+                       <img width="300px" height="200" src="{{ url('/uploads/'.$car->image) }}" alt="">
                     </div>
                     <ul>
-                        <li>Full course theory</li>
-                        <li>Full driving course</li>
-                        <li>Training in first aid</li>
-                        <li>Practical sessions</li>
-                        <li>Psychological support</li>
+                        <li><strong style="color: blueviolet">Brand :</strong> {{ $car->CarRelation->brand_name }}</li>
+                        <li><strong style="color: blueviolet">Rent Fee :</strong> {{ $car->fee }} BDT/day </li>
+                        <li><strong style="color: blueviolet">Car Name :</strong>{{$car->car_name}}</li>
+                        <li><strong style="color: blueviolet">Sit :</strong>{{$car->sit}}</li>
                     </ul>
-                    <a href="#" class="primary-btn second-bg">get Started</a>
+                    <a href="#" class="primary-btn second-bg">Book Now</a>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="pricing__item">
-                    <div class="pricing__item__title">
-                        <span>20% off</span>
-                        <h2>$ 379</h2>
-                        <h5>Power Booster</h5>
-                    </div>
-                    <ul>
-                        <li>Full course theory</li>
-                        <li>Full driving course</li>
-                        <li>Training in first aid</li>
-                        <li>Practical sessions</li>
-                        <li>Psychological support</li>
-                    </ul>
-                    <a href="#" class="primary-btn second-bg">get Started</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="pricing__item">
-                    <div class="pricing__item__title">
-                        <span>20% off</span>
-                        <h2>$ 259</h2>
-                        <h5>Freight Driving</h5>
-                    </div>
-                    <ul>
-                        <li>Full course theory</li>
-                        <li>Full driving course</li>
-                        <li>Training in first aid</li>
-                        <li>Practical sessions</li>
-                        <li>Psychological support</li>
-                    </ul>
-                    <a href="#" class="primary-btn second-bg">get Started</a>
-                </div>
-            </div>
+
+            @endforeach
+
         </div>
     </div>
 </section>

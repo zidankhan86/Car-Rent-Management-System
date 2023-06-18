@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('fuel_type');
             $table->string('image')->nullable();
             $table->string('fee');
+            $table->string('sit');
             $table->string('description');
             $table->timestamps();
         });

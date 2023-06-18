@@ -21,7 +21,7 @@
 
       <tr>
         <th scope="row">{{$item->id}}</th>
-        <td>{{$item->image}}</td>
+        <td><img height="100px" width="100px" src="{{ url('/uploads/'.$item->image) }}" alt=""></td>
         <td>{{$item->car_name}}</td>
         <td>{{$item->fee}}</td>
         <td>{{$item->description}}</td>

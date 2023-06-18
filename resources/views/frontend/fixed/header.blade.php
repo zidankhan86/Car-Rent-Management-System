@@ -23,16 +23,19 @@
             <div class="col-lg-5">
                 <div class="header__right">
                     <div class="header__right__search">
-                        <i class="fa fa-search search-switch"></i>
-                    </div>
-                    <div class="header__right__social">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <div class="search-box">
+                          <input type="text" class="search-input" placeholder="Search">
+                          <button class="btn-success" type="submit">
+                            <i class="fa fa-search"></i>
+                          </button>
+                        </div>
+                      </div>
+
+                    <div class="header__right__btn">
+                        <a href="#" class="btn btn-success">Sign In</a>
                     </div>
                     <div class="header__right__btn">
-                        <a href="#" class="primary-btn">Get Started</a>
+                        <a href="#" class="btn btn-info">Sign Up</a>
                     </div>
                 </div>
             </div>

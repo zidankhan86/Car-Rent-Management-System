@@ -21,7 +21,8 @@ class CarController extends Controller
         $request->validate([
             'car_name' => 'required|string|max:255',
             'fuel_type' => 'required|string|max:255',
-            'fee' => 'required|numeric',
+            'fee' => 'required|numeric|min:0',
+            'sit' => 'required|integer|min:2|max:16',
             'description' => 'required|string',
         ]);
 
@@ -43,6 +44,7 @@ class CarController extends Controller
             "fuel_type" =>$request->fuel_type,
             "image" =>$imageName,
             "fee" =>$request->fee,
+            "sit"=>$request->sit,
             "description" =>$request->description,
         ]);
         return back();

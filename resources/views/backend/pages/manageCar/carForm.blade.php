@@ -5,19 +5,11 @@
 
 <style>
     .custom-textarea {
-      width: 300px;
-      height: 120px;
-      resize: none;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      padding: 8px;
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-      line-height: 1.5;
+      height: 100px;
     }
   </style>
 
-<p class="btn btn-success">Add Car</p>
+<h3>Add Car Form</h3><br>
 {{-- <p class="btn btn-success">Add Car</p> --}}
 <form action="{{ route('car.store') }}" method="post" enctype="multipart/form-data">
 
@@ -25,8 +17,12 @@
     <div class="form-group">
       <label for="exampleInputName">Car Name</label>
       <input type="text" class="form-control" name="car_name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Brand Name">
+<div>@error('car_name')
 
-    </div>
+    <p class="text-danger">{{ $message }}</p>
+
+@enderror</div>
+    </div><br>
 
 
     <div class="form-group">
@@ -36,29 +32,54 @@
             <option value="{{$brand->id}}">{{$brand->brand_type}}</option>
             @endforeach
         </select>
-      </div>
+      </div><br>
 
     <div class="form-group">
         <label for="exampleInputPassword1">Fuel Type</label>
         <input type="text" class="form-control" name="fuel_type" id="exampleInputPassword1" placeholder="Brand Type Name">
-      </div>
+        <div>@error('fuel_type')
+
+            <p class="text-danger">{{ $message }}</p>
+
+        @enderror</div>
+      </div><br>
 
       <div class="form-group">
         <label for="exampleInputPassword1">Car Image</label>
         <input type="file" class="form-control" name="image" id="exampleInputPassword1" placeholder="Brand Type Name">
-      </div>
+      </div><br>
 
 
       <div class="form-group">
         <label for="exampleInputPassword1">Rent Fee</label>
         <input type="number" class="form-control" name="fee" id="exampleInputPassword1" placeholder="Brand Type Name">
-      </div>
 
+        <div>@error('fee')
+
+            <p class="text-danger">{{ $message }}</p>
+
+        @enderror</div>
+      </div><br>
+
+      <div>
+        <label for="">Sit</label>
+        <input type="number" class="form-control" name="sit" id="" placeholder="Sit">
+        <div>@error('sit')
+
+            <p class="text-danger">{{ $message }}</p>
+
+        @enderror</div>
+      </div><br>
 
       <div>
         <label for="">Description</label>
         <textarea class="form-control custom-textarea" name="description" id="" placeholder="Description"></textarea>
-      </div>
+        <div>@error('description')
+
+            <p class="text-danger">{{ $message }}</p>
+
+        @enderror</div>
+      </div><br>
 
 
     <button type="submit" class="btn btn-primary">Submit</button>
