@@ -1,21 +1,45 @@
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+<!-- Header Section Begin -->
+<header class="header">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Car<span>Book</span></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="oi oi-menu"></span> Menu
-      </button>
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="header__logo">
+                    <a href="./index.html"><img src="{{url ('frontend/img/logo.png') }}" alt=""></a>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <nav class="header__menu">
+                    <ul>
+                        <li class="active"><a href="{{ route('home') }}">Home</a></li>
+                        <li><a href="./courses.html">Courses</a></li>
+                        <li><a href="{{ route('car.rent') }}">Cars</a>
 
-      <div class="collapse navbar-collapse" id="ftco-nav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active"><a href="{{ route('home') }}" class="nav-link" style="color: black">Home</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link" style="color: black">About</a></li>
-          <li class="nav-item"><a href="services.html" class="nav-link" style="color: black">Services</a></li>
-          <li class="nav-item"><a href="pricing.html" class="nav-link" style="color: black">Pricing</a></li>
-          <li class="nav-item"><a href="{{ route('car.rent') }}" class="nav-link" style="color: black">Cars</a></li>
-          <li class="nav-item"><a href="blog.html" class="nav-link" style="color: black">Blog</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link" style="color: black">Contact</a></li>
-        </ul>
-      </div>
+                        </li>
+                        <li><a href="./blog.html">News</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-5">
+                <div class="header__right">
+                    <div class="header__right__search">
+                        <i class="fa fa-search search-switch"></i>
+                    </div>
+                    <div class="header__right__social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                    </div>
+                    <div class="header__right__btn">
+                        <a href="#" class="primary-btn">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="canvas__open">
+            <span class="fa fa-bars"></span>
+        </div>
     </div>
-  </nav>
-<!-- END nav -->
+</header>
+<!-- Header Section End -->

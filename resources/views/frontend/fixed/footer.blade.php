@@ -1,61 +1,66 @@
-<footer class="ftco-footer ftco-bg-dark ftco-section">
+<!-- Footer Section Begin -->
+<footer class="footer">
     <div class="container">
-      <div class="row mb-5">
-        <div class="col-md">
-          <div class="ftco-footer-widget mb-4">
-            <h2 class="ftco-heading-2"><a href="#" class="logo">Car<span>book</span></a></h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-              <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-              <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-              <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-            </ul>
-          </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-2 col-sm-6">
+                <div class="footer__widget">
+                    <h5>COMPANY</h5>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Company</a></li>
+                        <li><a href="#">Press & Blog</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Faq</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="footer__widget">
+                    <h5>Courses</h5>
+                    <ul>
+                        <li><a href="#">Winter driving</a></li>
+                        <li><a href="#">Program for seniors</a></li>
+                        <li><a href="#">Adult in car lesons</a></li>
+                        <li><a href="#">Defensive driving</a></li>
+                        <li><a href="#">Stick shit lessons</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="footer__widget">
+                    <h5>USEFUL LINKS</h5>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Drupal Themes</a></li>
+                        <li><a href="#">WordPress Themes</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Services</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="footer__about">
+                    <div class="footer__logo">
+                        <a href="#"><img src="{{url ('frontend/img/footer-logo.png') }}" alt=""></a>
+                    </div>
+                    <p>Address : 15 Division Street, New York, NY 12032, United States of America</p>
+                    <ul>
+                        <li>Phone : +0 (123) 456789</li>
+                        <li>Email : Kaseo@gmail.com</li>
+                        <li>Fax : +8 (123) 456 789</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="col-md">
-          <div class="ftco-footer-widget mb-4 ml-md-5">
-            <h2 class="ftco-heading-2">Information</h2>
-            <ul class="list-unstyled">
-              <li><a href="#" class="py-2 d-block">About</a></li>
-              <li><a href="#" class="py-2 d-block">Services</a></li>
-              <li><a href="#" class="py-2 d-block">Term and Conditions</a></li>
-              <li><a href="#" class="py-2 d-block">Best Price Guarantee</a></li>
-              <li><a href="#" class="py-2 d-block">Privacy &amp; Cookies Policy</a></li>
-            </ul>
-          </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                <div class="footer__copyright__text">
+                    <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                </div>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </div>
         </div>
-        <div class="col-md">
-           <div class="ftco-footer-widget mb-4">
-            <h2 class="ftco-heading-2">Customer Support</h2>
-            <ul class="list-unstyled">
-              <li><a href="#" class="py-2 d-block">FAQ</a></li>
-              <li><a href="#" class="py-2 d-block">Payment Option</a></li>
-              <li><a href="#" class="py-2 d-block">Booking Tips</a></li>
-              <li><a href="#" class="py-2 d-block">How it works</a></li>
-              <li><a href="#" class="py-2 d-block">Contact Us</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md">
-          <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Have a Questions?</h2>
-              <div class="block-23 mb-3">
-                <ul>
-                  <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-                  <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-                  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
-                </ul>
-              </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12 text-center">
-
-          <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-        </div>
-      </div>
     </div>
-  </footer>
+</footer>
+<!-- Footer Section End -->

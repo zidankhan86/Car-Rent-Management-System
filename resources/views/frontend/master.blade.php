@@ -1,34 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Carbook - Free Bootstrap 4 Template by Colorlib</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang="zxx">
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Dreams Template">
+    <meta name="keywords" content="Dreams, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dreams | Template</title>
 
-    <link rel="stylesheet" href="{{url ('frontend/css/open-iconic-bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{url ('frontend/css/animate.css') }}">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{url ('frontend/css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{url ('frontend/css/owl.theme.default.min.css') }}">
-    <link rel="stylesheet" href="{{url ('frontend/css/magnific-popup.css') }}">
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{{url ('frontend/css/bootstrap.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{url ('frontend/css/font-awesome.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{url ('frontend/css/nice-select.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{url ('frontend/css/magnific-popup.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{url ('frontend/css/jquery-ui.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{url ('frontend/css/owl.carousel.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{url ('frontend/css/slicknav.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{url ('frontend/css/style.css') }}" type="text/css">
+</head>
 
-    <link rel="stylesheet" href="{{url ('frontend/css/aos.css') }}">
-
-    <link rel="stylesheet" href="{{url ('frontend/css/ionicons.min.css') }}">
-
-    <link rel="stylesheet" href="{{url ('frontend/css/bootstrap-datepicker.css') }}">
-    <link rel="stylesheet" href="{{url ('frontend/css/jquery.timepicker.css') }}">
-
-
-    <link rel="stylesheet" href="{{url ('frontend/css/flaticon.css') }}">
-    <link rel="stylesheet" href="{{url ('frontend/css/icomoon.css') }}">
-    <link rel="stylesheet" href="{{url ('frontend/css/style.css') }}">
-  </head>
-  <body>
+<body>
+    <!-- Page Preloder -->
 
 
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__search">
+            <i class="fa fa-search search-switch"></i>
+        </div>
+        <div class="offcanvas__logo">
+            <a href="./index.html"><img src="{{url ('frontend/img/logo.png') }}" alt=""></a>
+        </div>
+        <nav class="offcanvas__menu mobile-menu">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./courses.html">Courses</a></li>
+                <li class="active"><a href="#">Pages</a>
+                    <ul class="dropdown">
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./instructor.html">Instructor</a></li>
+                        <li><a href="./pricing.html">Pricing</a></li>
+                        <li><a href="./faq.html">FAQ</a></li>
+                        <li><a href="./course-details.html">Course Details</a></li>
+                        <li><a href="./blog-details.html">Blog Details</a></li>
+                    </ul>
+                </li>
+                <li><a href="./blog.html">News</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-dribbble"></i></a>
+        </div>
+        <div class="offcanvas__btn">
+            <a href="#" class="primary-btn">Get Started</a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
 
 
 
@@ -37,38 +74,35 @@
 
 
 
-
-       @yield('content')
-
+@yield('content')
 
 
 
 
-    @include('frontend.fixed.footer')
+@include('frontend.fixed.footer')
 
 
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+    <!-- Search Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search End -->
 
+    <!-- Js Plugins -->
+    <script src="{{url ('frontend/js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{url ('frontend/js/bootstrap.min.js') }}"></script>
+    <script src="{{url ('frontend/js/jquery.nice-select.min.js') }}"></script>
+    <script src="{{url ('frontend/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{url ('frontend/js/jquery-ui.min.js') }}"></script>
+    <script src="{{url ('frontend/js/jquery.slicknav.js') }}"></script>
+    <script src="{{url ('frontend/js/owl.carousel.min.js') }}"></script>
+    <script src="{{url ('frontend/js/main.js') }}"></script>
+</body>
 
-  <script src="{{url ('frontend/js/jquery.min.js') }}"></script>
-  <script src="{{url ('frontend/js/jquery-migrate-3.0.1.min.js') }}"></script>
-  <script src="{{url ('frontend/js/popper.min.js') }}"></script>
-  <script src="{{url ('frontend/js/bootstrap.min.js') }}"></script>
-  <script src="{{url ('frontend/js/jquery.easing.1.3.js') }}"></script>
-  <script src="{{url ('frontend/js/jquery.waypoints.min.js') }}"></script>
-  <script src="{{url ('frontend/js/jquery.stellar.min.js') }}"></script>
-  <script src="{{url ('frontend/js/owl.carousel.min.js') }}"></script>
-  <script src="{{url ('frontend/js/jquery.magnific-popup.min.js') }}"></script>
-  <script src="{{url ('frontend/js/aos.js') }}"></script>
-  <script src="{{url ('frontend/js/jquery.animateNumber.min.js') }}"></script>
-  <script src="{{url ('frontend/js/bootstrap-datepicker.js') }}"></script>
-  <script src="{{url ('frontend/js/jquery.timepicker.min.js') }}"></script>
-  <script src="{{url ('frontend/js/scrollax.min.js') }}"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="{{url ('frontend/js/google-map.js') }}"></script>
-  <script src="{{url ('frontend/js/main.js') }}"></script>
-
-  </body>
 </html>
