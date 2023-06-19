@@ -28,6 +28,8 @@ Route::get('/booking-form',[BookController::class,'booking'])->name('booking.for
 Route::post('/booking-store',[BookController::class,'bookingStore'])->name('booking.store');
 Route::get('/booking-details/{id}',[BookController::class,'bookingDetails'])->name('booking.details');
 
+Route::get('/booking/list',[BookController::class,'bookingList'])->name('bookings.lists');
+
 //auth
 Route::get('/login',[AuthController::class,'login'])->name('login');
 Route::post('/login/process',[AuthController::class,'loginProcess'])->name('login.process');

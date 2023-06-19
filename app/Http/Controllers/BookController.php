@@ -59,4 +59,10 @@ if ($validator->fails()) {
         $cars = Car::find($id);
         return view('frontend.booking.bookingDetails',compact('cars'));
     }
+
+    public function bookingList(){
+
+        $userBooking = Book::all();
+        return view('backend.pages.order.orderlist',compact('userBooking'));
+    }
 }
