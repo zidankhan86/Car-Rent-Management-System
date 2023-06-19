@@ -69,4 +69,41 @@ class CarController extends Controller
         $cars = Car::find($id);
         return view('backend.pages.manageCar.carEdit',compact('cars','brands'));
     }
+
+    public function CarUpdate($id, Request $request){
+
+        $request->validate([
+            'car_name' => 'required|string|max:255',
+            'fuel_type' => 'required|string|max:255',
+            'fee' => 'required|numeric|min:0',
+            'sit' => 'required|integer|min:2|max:16',
+            'description' => 'required|string',
+        ]);
+
+
+
+        $imageName = null;
+        if ($request->hasFile('image')) {
+            $imageName = date('Ymdhis').'.'.$request->image->extension();
+            $request->image->storeAs('uploads', $imageName, 'public');
+        }
+
+
+        $update = car::find($id);
+
+        $update->update([
+
+            "brand_id" =>$request->brand_id,
+            "car_name" =>$request->car_name,
+            "fuel_type" =>$request->fuel_type,
+            "image" =>$imageName,
+            "fee" =>$request->fee,
+            "sit"=>$request->sit,
+            "description" =>$request->description,
+
+
+
+        ]);
+        return back();
+    }
 }

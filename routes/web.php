@@ -62,6 +62,7 @@ Route::get('/brand/edit/{id}',[BrandController::class,'brandEdit'])->name('brand
  Route::get('/car/rent/table',[CarController::class,'CarTable'])->name('car.table');
  Route::get('/car/rent/view/{id}',[CarController::class,'CarView'])->name('car.view');
  Route::get('/car/rent/edit/{id}',[CarController::class,'CarEdit'])->name('car.edit');
+ Route::post('/car/rent/update/{id}',[CarController::class,'CarUpdate'])->name('car.update');
 
 
  //Route::get('/content',[ContentController::class,'contentForm'])->name('content.form');

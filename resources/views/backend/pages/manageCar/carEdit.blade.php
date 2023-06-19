@@ -11,7 +11,7 @@
 
 <h3>Add Car Form</h3><br>
 {{-- <p class="btn btn-success">Add Car</p> --}}
-<form action="{{ route('car.store') }}" method="post" enctype="multipart/form-data">
+<form action="{{ route('car.update',$cars->id) }}" method="post" enctype="multipart/form-data">
 
     @csrf
     <div class="form-group">
