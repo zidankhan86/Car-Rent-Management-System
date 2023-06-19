@@ -88,6 +88,10 @@
                     </div>
                 </div>
 
+                <div>
+                    <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
+                </div>
+
                 <div class="row mt-3 mx-4">
                     <div class="col-12">
                         <label class="order-form-label" for="date-picker-example">Drop Date</label>

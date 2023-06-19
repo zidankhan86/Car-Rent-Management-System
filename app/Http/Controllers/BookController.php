@@ -4,13 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Models\Book;
 use App\Models\Car;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 class BookController extends Controller
 {
+
     public function booking(){
-        return view('frontend.booking.bookingForm');
+
+        $brands=User::all();
+        return view('frontend.booking.bookingForm',compact('brands'));
     }
 
     public function bookingStore(Request $request){
@@ -35,6 +39,7 @@ if ($validator->fails()) {
         //dd($request->all());
 
         Book::create([
+            "user_id"=>$request->user_id,
             "name" =>$request->name,
             "phone" =>$request->phone,
             "from_date" =>$request->from_date,
