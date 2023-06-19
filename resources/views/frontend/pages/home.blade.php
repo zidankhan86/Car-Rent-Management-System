@@ -28,9 +28,8 @@
                             <span>Why choose us ?</span>
                             <h2>Our feature</h2>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua viverra maecenas facilisis. </p>
-                        <a href="#" class="primary-btn second-bg">See Courses</a>
+                        <p>One of the best features of a car rental service is the option for flexible pickup and drop-off locations. </p>
+                        <a href="#" class="primary-btn second-bg">Thanks</a>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-8">
@@ -64,19 +63,18 @@
             <div class="row">
                 <div class="col-lg-6 p-0">
                     <div class="about__video__bg set-bg" data-setbg="{{url ('frontend/img/video-bg.jpg') }}">
-                        <a href="https://www.youtube.com/watch?v=bGuHgRQSEuk" class="play-btn video-popup"><i
-                                class="fa fa-play"></i></a>
+
                     </div>
                 </div>
                 <div class="col-lg-6 p-0">
                     <div class="about__video__text">
                         <div class="section-title">
-                            <span>Welcome to Online trafic school</span>
-                            <h2>looking for lessons?</h2>
+                            <span>Welcome to Online Car Service</span>
+                            <h2>looking for Car?</h2>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Quis ipsum vidnas accumsan lacus vel facilisis. </p>
-                        <a href="#" class="primary-btn second-bg">Learn more</a>
+                        <p>One of the best car rental services available today is known for its exceptional customer service,
+                            extensive vehicle selection, and competitive pricing.
+                             With a user-friendly online platform and a seamless reservation process, customers can easily browse and choose from a wide range of well-maintained cars to suit their specific needs.
                     </div>
                 </div>
             </div>
@@ -84,53 +82,7 @@
     </section>
     <!-- About Video Section End -->
 
-    <!-- Application Form Section Begin -->
-    <section class="application-form spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title center-title">
-                        <span>Giving Best Options For You</span>
-                        <h2>Application Form</h2>
-                    </div>
-                </div>
-            </div>
-            <form>
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-6">
-                        <input type="text" placeholder="Your name">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6">
-                        <input type="text" placeholder="Your Email">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6">
-                        <input type="text" placeholder="Your Phone">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6">
-                        <input type="text" class="datepicker_pop" placeholder="Date & time">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6">
-                        <select>
-                            <option value="">Courses type</option>
-                            <option value="">Safe Driving Courses</option>
-                            <option value="">Motorhome Drivers</option>
-                        </select>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6">
-                        <select>
-                            <option value="">Car type</option>
-                            <option value="">Hatchback</option>
-                            <option value="">Sedan</option>
-                        </select>
-                    </div>
-                    <div class="col-lg-12 text-center">
-                        <button type="submit" class="site-btn">SEND INQUIRY</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </section>
-    <!-- Application Form Section End -->
+    
 
     <!-- Pricing Section Begin -->
     <section class="pricing spad set-bg" data-setbg="{{url ('frontend/img/pricing-bg.jpg') }}">

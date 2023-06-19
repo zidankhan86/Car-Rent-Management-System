@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
+use App\Models\Car;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -81,5 +82,13 @@ class AuthController extends Controller
 
     public function adminProfile(){
         return view('backend.pages.profile.profile');
+    }
+
+    public function search(Request $request)
+    {
+
+        $searchResult=Car::where('car_name','LIKE','%'.$request->search.'%')->get();
+
+      return view('frontend.search.search',compact('searchResult'));
     }
 }
