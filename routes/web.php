@@ -55,6 +55,7 @@ Route::get('/add/brand/form',[BrandController::class,'brandForm'])->name('brand.
 Route::post('/add/brand/store',[BrandController::class,'brandStore'])->name('brand.store');
 Route::get('/brand/table',[BrandController::class,'brandTable'])->name('brand.table');
 Route::get('/brand/view/{id}',[BrandController::class,'brandView'])->name('brand.view');
+Route::get('/brand/edit/{id}',[BrandController::class,'brandEdit'])->name('brand.edit');
 
  Route::get('/car/rent/form',[CarController::class,'addCar'])->name('car.form');
  Route::post('/car/rent/form',[CarController::class,'CarStore'])->name('car.store');
