@@ -23,7 +23,7 @@
         <td>{{ $item->brand_type}}</td>
         <td>
             <a href="" class="btn btn-success">Edit</a>
-            <a href="" class="btn btn-info">View</a>
+            <a href="{{ route('brand.view',$item->id) }}" class="btn btn-info">View</a>
         </td>
       </tr>
 

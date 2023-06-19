@@ -37,6 +37,12 @@ public function brandTable(){
     return view('backend.pages.brand.brandList',compact('brands'));
 }
 
+public function brandView($id){
+
+    $brands = Brand::find($id);
+    return view('backend.pages.brand.brandView',compact('brands'));
+}
+
 
 
 }

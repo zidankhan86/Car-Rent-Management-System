@@ -42,9 +42,11 @@ Route::get('/my/profile',[AuthController::class,'myProfile'])->name('my.profile'
 Route::get('/search',[AuthController::class,'search'])->name('user.search');
 
 
+
+
 Route::group(['middleware'=>'auth','admin','prefix'=>'admin'],function(){
 
-    Route::get('/admin/profile',[AuthController::class,'adminProfile'])->name('admin.profile');
+Route::get('/admin/profile',[AuthController::class,'adminProfile'])->name('admin.profile');
 
 
 
@@ -52,6 +54,7 @@ Route::get('/',[HomeController::class,'dashboard'])->name('dashboard');
 Route::get('/add/brand/form',[BrandController::class,'brandForm'])->name('brand.form');
 Route::post('/add/brand/store',[BrandController::class,'brandStore'])->name('brand.store');
 Route::get('/brand/table',[BrandController::class,'brandTable'])->name('brand.table');
+Route::get('/brand/view/{id}',[BrandController::class,'brandView'])->name('brand.view');
 
  Route::get('/car/rent/form',[CarController::class,'addCar'])->name('car.form');
  Route::post('/car/rent/form',[CarController::class,'CarStore'])->name('car.store');
