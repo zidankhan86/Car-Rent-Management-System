@@ -42,26 +42,29 @@
     <br><br> <br><br> <br><br><div class="container">
         <div class="card">
             <div class="card-body">
-                <h3 class="card-title"> Tittle</h3>
+              
                 <h6 class="card-subtitle"></h6>
                 <div class="row">
                     <div class="col-lg-5 col-md-5 col-sm-6">
-                        <div class="white-box text-center"><img height="550px" width="350px" src="{{ url('/uploads/uploads/') }}" class="img-responsive"></div>
+                        <div class="white-box text-center"><img height="550px" width="350px" src="{{ url('/uploads/'.$cars->image) }}" class="img-responsive"></div>
                     </div>
                     <div class="col-lg-7 col-md-7 col-sm-6">
-                        <h4 class="box-title mt-5">Product description</h4>
-                        <p></p>
+                        <h4 class="box-title mt-5">About Cars</h4>
+                        <p>{{ $cars->description }}</p>
                         <h2 class="mt-5">
-                        Tour Cost - Tk /Person
+                        Car Rent {{ $cars->fee }} - Tk /day
                         </h2>
-                        <p style="color: black font-weight: bold;">  <span>Seat Left</span></p>
+
+                        <p style="color: black font-weight: bold;">  <span>Car Name: </span>{{ $cars->CarRelation->brand_name }}</p>
+                        <p style="color: black font-weight: bold;">  <span>Car Brand: </span>{{ $cars->car_name }}</p>
+                        <p style="color: black font-weight: bold;">  <span>Car Seat: </span>{{ $cars->sit }}</p>
 
                         <a href="{{ route('booking.form') }}" class="btn btn-primary btn-rounded">Book Now</a>
-                        <h3 class="box-title mt-5">Key Highlights</h3>
+                        <h3 class="box-title mt-5">Key Highlights</h3><br>
                         <ul class="list-unstyled">
-                            <li><i class="fa fa-check text-success"></i>Whether you're a thrill-seeker</li>
-                            <li><i class="fa fa-check text-success"></i>leaving you with cherished memories</li>
-                            <li><i class="fa fa-check text-success"></i>Travel opens up a world of possibilities</li>
+                            <li><i class="fa fa-check text-success"></i>Wide vehicle selection for diverse customer needs.</li>
+                            <li><i class="fa fa-check text-success"></i>Flexible rental terms for convenience and customization.</li>
+                            <li><i class="fa fa-check text-success"></i>Transparent pricing and policies for trust and clarity.</li>
                         </ul>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12">
