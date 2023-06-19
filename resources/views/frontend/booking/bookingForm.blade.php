@@ -3,129 +3,157 @@
 @section('content')
 
 
-<section class="order-form m-4">
+<style>
+    .order-form .container {
+      color: #4c4c4c;
+      padding: 20px;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+      max-width: 650px;
+    }
+
+    .order-form-label {
+      margin: 8px 0 0 0;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+.order-form-input,
+.form-label,
+.form-check-label {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+
+    }
+
+    .btn-submit:hover {
+      background-color: #0D47A1 !important;
+    }
+</style>
+
+<br><br><br><br><section class="order-form m-4">
     <div class="container pt-4">
         <div class="row">
             <div class="col-12 px-4">
-                <h1>You can see my Order Form</h1>
-                <span>with some explanation below</span>
+                <h5> Booking Form</h5>
+
                 <hr class="mt-1" />
             </div>
+        <form action="{{ route('booking.store') }}" method="POST" enctype="multipart/form-data">
 
+            @csrf
             <div class="col-12">
                 <div class="row mx-4">
                     <div class="col-12">
-                        <label class="order-form-label">Name</label>
+
                     </div>
                     <div class="col-sm-6">
                         <div class="form-outline">
-                            <input type="text" id="form1" class="form-control order-form-input" />
-                            <label class="form-label" for="form1">First</label>
+                            <input type="text" id="form1" name="name" class="form-control order-form-input" placeholder="Your Name"/>
+
+                            @error('name')
+
+                            <p class="text-danger">{{ $message }}</p>
+
+                            @enderror
                         </div>
                     </div>
                     <div class="col-sm-6 mt-2 mt-sm-0">
                         <div class="form-outline">
-                            <input type="text" id="form2" class="form-control order-form-input" />
-                            <label class="form-label" for="form2">Last</label>
+
+                            <input type="tel" id="form2" name="phone" class="form-control order-form-input" placeholder="Yor Phone" />
+
                         </div>
+
+                        @error('phone')
+
+                            <p class="text-danger">{{ $message }}</p>
+
+                            @enderror
                     </div>
                 </div>
 
                 <div class="row mt-3 mx-4">
                     <div class="col-12">
-                        <label class="order-form-label">Type of thing you want to order</label>
+                        <label class="order-form-label">Pick-Up Date</label>
                     </div>
                     <div class="col-12">
                         <div class="form-outline">
-                            <input type="text" id="form3" class="form-control order-form-input" />
+                            <input type="date" id="form4" name="from_date" class="form-control order-form-input" />
                         </div>
+                        @error('from_date')
+
+                        <p class="text-danger">{{ $message }}</p>
+
+                        @enderror
                     </div>
                 </div>
 
                 <div class="row mt-3 mx-4">
                     <div class="col-12">
-                        <label class="order-form-label">Another type of thing you want to order</label>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-outline">
-                            <input type="text" id="form4" class="form-control order-form-input" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row mt-3 mx-4">
-                    <div class="col-12">
-                        <label class="order-form-label" for="date-picker-example">Date</label>
+                        <label class="order-form-label" for="date-picker-example">Drop Date</label>
                     </div>
                     <div class="col-12">
                         <div class="form-outline datepicker" data-mdb-toggle-button="false">
                             <input
-                            type="text" class="form-control order-form-input" id="datepicker1" data-mdb-toggle="datepicker" />
-                            <label for="datepicker1" class="form-label">Select a date</label>
+                            type="date" name="to_date" class="form-control order-form-input" id="datepicker1" data-mdb-toggle="datepicker" />
+
                         </div>
+                        @error('to_date')
+
+                        <p class="text-danger">{{ $message }}</p>
+
+
+                        @enderror
                     </div>
                 </div>
 
                 <div class="row mt-3 mx-4">
                     <div class="col-12">
-                        <label class="order-form-label">Adress</label>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-outline">
-                            <input type="text" id="form5" class="form-control order-form-input" />
-                            <label class="form-label" for="form5">Street Address</label>
+
+                        <div class="form-group">
+                          <label for=""></label>
+                          <input type="text"
+                            class="form-control" name="road" id="" aria-describedby="helpId" placeholder="Street Address">
+
                         </div>
+
+                        @error('road')
+                        <p class="text-danger">{{ $message }}</p>
+                        @enderror
                     </div>
-                    <div class="col-12 mt-2">
-                        <div class="form-outline">
-                            <input type="text" id="form6" class="form-control order-form-input" />
-                            <label class="form-label" for="form6">Street Address Line 2</label>
-                        </div>
-                    </div>
+
                     <div class="col-sm-6 mt-2 pe-sm-2">
                         <div class="form-outline">
-                            <input type="text" id="form7" class="form-control order-form-input" />
-                            <label class="form-label" for="form7">City</label>
+                            <input type="text" id="form9" name="city" class="form-control order-form-input" placeholder="Enter City Name" />
+
                         </div>
+                        @error('city')
+                        <p class="text-danger">{{ $message }}</p>
+                        @enderror
                     </div>
                     <div class="col-sm-6 mt-2 ps-sm-0">
                         <div class="form-outline">
-                            <input type="text" id="form8" class="form-control order-form-input" />
-                            <label class="form-label" for="form8">Region</label>
+                            <input type="text" name="location" id="form10" class="form-control order-form-input" placeholder="Where to pick" />
+
                         </div>
-                    </div>
-                    <div class="col-sm-6 mt-2 pe-sm-2">
-                        <div class="form-outline">
-                            <input type="text" id="form9" class="form-control order-form-input" />
-                            <label class="form-label" for="form9">Postal / Zip Code</label>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 mt-2 ps-sm-0">
-                        <div class="form-outline">
-                            <input type="text" id="form10" class="form-control order-form-input" />
-                            <label class="form-label" for="form10">Country</label>
-                        </div>
+                        @error('location')
+                        <p class="text-danger">{{ $message }}</p>
+                        @enderror
                     </div>
                 </div>
 
-                <div class="row mt-3 mx-4">
-                    <div class="col-12">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                            <label class="form-check-label" for="flexCheckDefault">I know what I need to know</label>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="row mt-3">
                     <div class="col-12">
-                        <button type="button" id="btnSubmit" class="btn btn-primary d-block mx-auto btn-submit">Submit</button>
+                        <button type="submit" id="btnSubmit" class="btn btn-primary d-block mx-auto btn-submit">Submit</button>
                     </div>
                 </div>
             </div>
+
+        </form>
         </div>
     </div>
   </section>
 
-  
+
   @endsection

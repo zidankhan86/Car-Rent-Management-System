@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\CarRentController;
@@ -22,6 +23,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[FrontendHomeController::class,'home'])->name('home');
 Route::get('/car-rent',[CarRentController::class,'carRent'])->name('car.rent');
 
+Route::get('/booking-form',[BookController::class,'booking'])->name('booking.form');
+Route::post('/booking-store',[BookController::class,'bookingStore'])->name('booking.store');
 
 
 
@@ -34,6 +37,8 @@ Route::get('/brand/table',[BrandController::class,'brandTable'])->name('brand.ta
  Route::get('/car/rent/form',[CarController::class,'addCar'])->name('car.form');
  Route::post('/car/rent/form',[CarController::class,'CarStore'])->name('car.store');
  Route::get('/car/rent/table',[CarController::class,'CarTable'])->name('car.table');
+
+
 
 
  //Route::get('/content',[ContentController::class,'contentForm'])->name('content.form');

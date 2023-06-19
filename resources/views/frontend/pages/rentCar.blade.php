@@ -30,7 +30,7 @@
                         <li><strong style="color: blueviolet">Car Name :</strong>{{$car->car_name}}</li>
                         <li><strong style="color: blueviolet">Sit :</strong>{{$car->sit}}</li>
                     </ul>
-                    <a href="#" class="primary-btn second-bg">Book Now</a>
+                    <a href="{{ route('booking.form') }}" class="primary-btn second-bg">Details</a>
                 </div>
             </div>
 
