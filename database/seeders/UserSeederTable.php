@@ -19,7 +19,10 @@ class UserSeederTable extends Seeder
             "name"=>"Admin",
             "email"=>"admin@gmail.com",
             "password"=>bcrypt('12345'),
-            "role"=>'admin'
+            "role"=>'admin',
+            "phone"=>'01712345622',
+            "address"=>'Sector 10 ,IUBAT'
+
 
 
         ]);

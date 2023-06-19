@@ -16,7 +16,7 @@
 
                         </li>
                         <li><a href="./blog.html">News</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
+                        <li><a href="./contact.html">Profile</a></li>
                     </ul>
                 </nav>
             </div>
@@ -35,9 +35,11 @@
                         <a href="{{ route('login') }}" class="btn btn-success">Sign In</a>
                     </div>
                     <div class="header__right__btn">
-                        <a href="#" class="btn btn-info">Sign Up</a>
+                        <a href="{{ route('registration') }}" class="btn btn-info">Sign Up</a>
                     </div>
+
                 </div>
+
             </div>
         </div>
         <div class="canvas__open">

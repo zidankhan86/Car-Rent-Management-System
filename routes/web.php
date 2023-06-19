@@ -31,7 +31,8 @@ Route::get('/booking-details/{id}',[BookController::class,'bookingDetails'])->na
 //auth
 Route::get('/login',[AuthController::class,'login'])->name('login');
 Route::post('/login/process',[AuthController::class,'loginProcess'])->name('login.process');
-
+Route::get('/registration',[AuthController::class,'registration'])->name('registration');
+Route::post('/registration/store',[AuthController::class,'regStore'])->name('reg.store');
 
 Route::group(['middleware'=>'auth','admin','prefix'=>'admin'],function(){
 
