@@ -62,4 +62,11 @@ class CarController extends Controller
         $cars = Car::find($id);
         return view('backend.pages.manageCar.carView',compact('cars'));
     }
+
+    public function CarEdit($id){
+
+        $brands = Brand::all();
+        $cars = Car::find($id);
+        return view('backend.pages.manageCar.carEdit',compact('cars','brands'));
+    }
 }

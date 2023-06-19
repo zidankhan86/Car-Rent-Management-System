@@ -27,7 +27,7 @@
         <td>{{$item->description}}</td>
 
         <td>
-            <a href="" class="btn btn-success">Edit</a>
+            <a href="{{ route('car.edit',$item->id) }}" class="btn btn-success">Edit</a>
             <a href="{{route('car.view',$item->id)}}" class="btn btn-info">View</a>
         </td>
       </tr>
