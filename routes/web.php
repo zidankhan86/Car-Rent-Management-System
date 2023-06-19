@@ -39,7 +39,10 @@ Route::get('/logout',[AuthController::class,'logout'])->name('logout');
 
 Route::get('/my/profile',[AuthController::class,'myProfile'])->name('my.profile');
 
+
 Route::group(['middleware'=>'auth','admin','prefix'=>'admin'],function(){
+
+    Route::get('/admin/profile',[AuthController::class,'adminProfile'])->name('admin.profile');
 
 
 Route::get('/',[HomeController::class,'dashboard'])->name('dashboard');

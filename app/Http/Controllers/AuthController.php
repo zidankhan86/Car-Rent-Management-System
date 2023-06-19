@@ -75,4 +75,8 @@ class AuthController extends Controller
     public function myProfile(){
         return view('frontend.profile.profile');
     }
+
+    public function adminProfile(){
+        return view('backend.pages.profile.profile');
+    }
 }
