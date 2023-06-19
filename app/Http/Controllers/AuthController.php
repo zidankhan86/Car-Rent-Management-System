@@ -63,4 +63,16 @@ class AuthController extends Controller
 
             return redirect()->route('home');
         }
+        public function logout(){
+            Auth::logout();
+
+            // Alert()->success('Success','Logout');
+
+            return redirect()->route('home');
+
+    }
+
+    public function myProfile(){
+        return view('frontend.profile.profile');
+    }
 }

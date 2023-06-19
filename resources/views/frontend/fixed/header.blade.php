@@ -15,8 +15,26 @@
                         <li><a href="{{ route('car.rent') }}">Cars</a>
 
                         </li>
-                        <li><a href="./blog.html">News</a></li>
-                        <li><a href="./contact.html">Profile</a></li>
+
+                        @auth
+                                       @if (auth()->user()->role=='customer')
+
+                        <li><a href="{{ route('my.profile') }}">Profile</a></li>
+                        <li><a href="{{ route('logout') }}">Logout</a></li>
+                                      @endif
+
+
+                         @else
+
+                         <div class="header__right__btn">
+                            <a href="{{ route('login') }}" class="btn btn-success">Sign In</a>
+                        </div>
+                        <div class="header__right__btn">
+                            <a href="{{ route('registration') }}" class="btn btn-info">Sign Up</a>
+                        </div>
+
+
+                         @endauth
                     </ul>
                 </nav>
             </div>
@@ -31,12 +49,7 @@
                         </div>
                       </div>
 
-                    <div class="header__right__btn">
-                        <a href="{{ route('login') }}" class="btn btn-success">Sign In</a>
-                    </div>
-                    <div class="header__right__btn">
-                        <a href="{{ route('registration') }}" class="btn btn-info">Sign Up</a>
-                    </div>
+
 
                 </div>
 

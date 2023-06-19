@@ -33,6 +33,9 @@ Route::get('/login',[AuthController::class,'login'])->name('login');
 Route::post('/login/process',[AuthController::class,'loginProcess'])->name('login.process');
 Route::get('/registration',[AuthController::class,'registration'])->name('registration');
 Route::post('/registration/store',[AuthController::class,'regStore'])->name('reg.store');
+Route::get('/logout',[AuthController::class,'logout'])->name('logout');
+
+Route::get('/my/profile',[AuthController::class,'myProfile'])->name('my.profile');
 
 Route::group(['middleware'=>'auth','admin','prefix'=>'admin'],function(){
 
