@@ -164,6 +164,38 @@ mark {
                 </div>
             </div>
         </div>
+        <div class="row gutters-sm">
+
+            <div class="col-sm-12 mb-3">
+                <h3 class="text-center">Order Information</h3>
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Road </th>
+                        <th scope="col">Order Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($order as $key=>$item)
+                        <tr>
+                            <th scope="row">{{ $key+1 }}</th>
+                            <td>{{ $item->name }}</td>
+                            <td>{{ $item->phone }}</td>
+                            <td>{{ $item->location }}</td>
+                            <td>{{ $item->road }}</td>
+                            <td>{{ $item->created_at }}</td>
+                          </tr>
+                        @endforeach
+                    </tbody>
+                  </table>
+            </div>
+          </div>
+
+    </div>
 
     </div>
 </section>

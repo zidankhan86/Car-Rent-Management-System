@@ -1,4 +1,4 @@
-@extends('frontend.master')
+@extends('backend.master')
 @section('content')
 
 
@@ -165,7 +165,8 @@ mark {
             </div>
         </div>
 
-    </div>
+
+       
 </section>
 
 @endsection

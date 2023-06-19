@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Book;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -73,7 +74,9 @@ class AuthController extends Controller
     }
 
     public function myProfile(){
-        return view('frontend.profile.profile');
+
+        $order = Book::all();
+        return view('frontend.profile.profile',compact('order'));
     }
 
     public function adminProfile(){
