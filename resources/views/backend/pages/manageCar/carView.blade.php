@@ -12,6 +12,8 @@
     <meta name="author" content="">
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
+
+
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/pricing/">
 
     <!-- Bootstrap core CSS -->
@@ -34,13 +36,15 @@
       <div class="card-deck mb-3 text-center">
         <div class="card mb-4 box-shadow">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">{{ $brands->brand_name }}</h4>
+            <h4 class="my-0 font-weight-normal">{{ $cars->car_name}}</h4>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">Brand : <small class="text-muted">{{ $brands->brand_name }}</small></h1>
+            <h1 class="card-title pricing-card-title">Car : {{ $cars->car_name}}<small class="text-muted"></small></h1>
             <ul class="list-unstyled mt-3 mb-4">
-              <li>Type: {{ $brands->brand_type }}</li>
-              <li>Brnad Added :{{ $brands->created_at->diffForHumans() }}</li>
+              <li>Brand: {{ $cars->CarRelation->brand_name}} </li>
+              <li>Sit: {{ $cars->sit}} </li>
+              <li>Sit: {{ $cars->fee}}  BDT/day </li>
+              <li>Brnad Added :{{ $cars->created_at->diffForHumans() }}</li>
 
             </ul>
 

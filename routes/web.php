@@ -59,7 +59,7 @@ Route::get('/brand/view/{id}',[BrandController::class,'brandView'])->name('brand
  Route::get('/car/rent/form',[CarController::class,'addCar'])->name('car.form');
  Route::post('/car/rent/form',[CarController::class,'CarStore'])->name('car.store');
  Route::get('/car/rent/table',[CarController::class,'CarTable'])->name('car.table');
-
+ Route::get('/car/rent/view/{id}',[CarController::class,'CarView'])->name('car.view');
 
 
 
