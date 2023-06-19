@@ -25,7 +25,7 @@ Route::get('/car-rent',[CarRentController::class,'carRent'])->name('car.rent');
 
 Route::get('/booking-form',[BookController::class,'booking'])->name('booking.form');
 Route::post('/booking-store',[BookController::class,'bookingStore'])->name('booking.store');
-
+Route::get('/booking-details/{id}',[BookController::class,'bookingDetails'])->name('booking.details');
 
 
 

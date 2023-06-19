@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
+use App\Models\Car;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -46,5 +47,11 @@ if ($validator->fails()) {
 
         return back();
 
+    }
+
+    public function bookingDetails($id){
+
+        $cars = Car::find($id);
+        return view('frontend.booking.bookingDetails',compact('cars'));
     }
 }
