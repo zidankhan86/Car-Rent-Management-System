@@ -49,15 +49,15 @@
                     Manage Customer
                 </a>
 
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{ route('order.report') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                    Upload  Content
+                    Report
                 </a>
             </div>
         </div>
         <div class="sb-sidenav-footer">
             <div
-            
+
              class="small">Logged in as:</div>
            {{ auth()->user()->name }}  <br>
         </div>

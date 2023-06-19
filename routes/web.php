@@ -1,13 +1,14 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CarController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BrandController;
-use App\Http\Controllers\CarController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\CarRentController;
 use App\Http\Controllers\frontend\HomeController as FrontendHomeController;
-use App\Http\Controllers\HomeController;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,6 +64,10 @@ Route::get('/brand/edit/{id}',[BrandController::class,'brandEdit'])->name('brand
  Route::get('/car/rent/view/{id}',[CarController::class,'CarView'])->name('car.view');
  Route::get('/car/rent/edit/{id}',[CarController::class,'CarEdit'])->name('car.edit');
  Route::post('/car/rent/update/{id}',[CarController::class,'CarUpdate'])->name('car.update');
+
+
+ Route::get('/report',[ReportController::class,'report'])->name('order.report');
+Route::get('/report/search',[ReportController::class,'reportSearch'])->name('order.report.search');
 
 
  //Route::get('/content',[ContentController::class,'contentForm'])->name('content.form');
