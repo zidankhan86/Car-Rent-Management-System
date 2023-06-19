@@ -50,7 +50,7 @@ if ($validator->fails()) {
 
         ]);
 
-        return back();
+        return redirect()->route('home');
 
     }
 
