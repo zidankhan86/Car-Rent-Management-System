@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CarController;
@@ -27,9 +28,15 @@ Route::get('/booking-form',[BookController::class,'booking'])->name('booking.for
 Route::post('/booking-store',[BookController::class,'bookingStore'])->name('booking.store');
 Route::get('/booking-details/{id}',[BookController::class,'bookingDetails'])->name('booking.details');
 
+//auth
+Route::get('/login',[AuthController::class,'login'])->name('login');
+Route::post('/login/process',[AuthController::class,'loginProcess'])->name('login.process');
 
 
-Route::get('/admin',[HomeController::class,'dashboard'])->name('dashboard');
+Route::group(['middleware'=>'auth','admin','prefix'=>'admin'],function(){
+
+
+Route::get('/',[HomeController::class,'dashboard'])->name('dashboard');
 Route::get('/add/brand/form',[BrandController::class,'brandForm'])->name('brand.form');
 Route::post('/add/brand/store',[BrandController::class,'brandStore'])->name('brand.store');
 Route::get('/brand/table',[BrandController::class,'brandTable'])->name('brand.table');
@@ -44,5 +51,5 @@ Route::get('/brand/table',[BrandController::class,'brandTable'])->name('brand.ta
  //Route::get('/content',[ContentController::class,'contentForm'])->name('content.form');
  //Route::post('/content-store',[ContentController::class,'contentStore'])->name('content.store');
  //Route::get('/content/list',[ContentController::class,'contentList'])->name('content.list');
-
+});
 

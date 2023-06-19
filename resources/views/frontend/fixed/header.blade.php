@@ -32,7 +32,7 @@
                       </div>
 
                     <div class="header__right__btn">
-                        <a href="#" class="btn btn-success">Sign In</a>
+                        <a href="{{ route('login') }}" class="btn btn-success">Sign In</a>
                     </div>
                     <div class="header__right__btn">
                         <a href="#" class="btn btn-info">Sign Up</a>
