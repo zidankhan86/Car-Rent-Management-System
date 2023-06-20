@@ -37,8 +37,8 @@ class ReportController extends Controller
 
       $status=$request->status;
 
-         $orders=Book::whereBetween('created_at', [$from, $to])->get();
-         return view('backend.report.report',compact('orders'));
+         $report=Book::whereBetween('created_at', [$from, $to])->get();
+         return view('backend.report.report',compact('report'));
 
      }
 }
