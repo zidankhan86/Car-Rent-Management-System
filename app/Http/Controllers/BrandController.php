@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Brand;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class BrandController extends Controller
 {
@@ -25,6 +26,9 @@ public function brandStore(Request $request){
         "brand_name" =>$request->brand_name,
         "brand_type" =>$request->brand_type,
     ]);
+
+    Alert::toast('Success! Brand Added','success');
+
 
     return back();
 

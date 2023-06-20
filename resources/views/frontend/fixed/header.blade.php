@@ -11,7 +11,7 @@
                 <nav class="header__menu">
                     <ul>
                         <li class="active"><a href="{{ route('home') }}">Home</a></li>
-                        <li><a href="./courses.html">Courses</a></li>
+                        <li><a href="./courses.html">DriverS</a></li>
                         <li><a href="{{ route('car.rent') }}">Cars</a>
 
                         </li>

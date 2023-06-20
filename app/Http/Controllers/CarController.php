@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Brand;
 use App\Models\Car;
+use App\Models\Brand;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class CarController extends Controller
 {
@@ -47,6 +48,8 @@ class CarController extends Controller
             "sit"=>$request->sit,
             "description" =>$request->description,
         ]);
+
+        Alert::toast('Success! Car Post Added','success');
         return back();
 
     }
@@ -104,6 +107,8 @@ class CarController extends Controller
 
 
         ]);
+
+        Alert::toast('Success! Car Updated','success');
         return back();
     }
 }

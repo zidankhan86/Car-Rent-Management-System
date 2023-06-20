@@ -25,11 +25,9 @@ use App\Http\Controllers\frontend\HomeController as FrontendHomeController;
 Route::get('/',[FrontendHomeController::class,'home'])->name('home');
 Route::get('/car-rent',[CarRentController::class,'carRent'])->name('car.rent');
 
-Route::get('/booking-form',[BookController::class,'booking'])->name('booking.form');
-Route::post('/booking-store',[BookController::class,'bookingStore'])->name('booking.store');
+
 Route::get('/booking-details/{id}',[BookController::class,'bookingDetails'])->name('booking.details');
 
-Route::get('/booking/list',[BookController::class,'bookingList'])->name('bookings.lists');
 
 //auth
 Route::get('/login',[AuthController::class,'login'])->name('login');
@@ -47,6 +45,15 @@ Route::get('/search',[AuthController::class,'search'])->name('user.search');
 
 Route::group(['middleware'=>'auth','admin','prefix'=>'admin'],function(){
 
+    //Frontend
+    Route::get('/booking-form',[BookController::class,'booking'])->name('booking.form');
+    Route::post('/booking-store',[BookController::class,'bookingStore'])->name('booking.store');
+    Route::get('/booking/list',[BookController::class,'bookingList'])->name('bookings.lists');
+
+
+
+
+    //Backend
 Route::get('/admin/profile',[AuthController::class,'adminProfile'])->name('admin.profile');
 
 

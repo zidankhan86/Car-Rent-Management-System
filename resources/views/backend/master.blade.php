@@ -28,6 +28,7 @@
                 <main>
 
                   @yield('content')
+                   @include('sweetalert::alert')
 
 
                 </main>
