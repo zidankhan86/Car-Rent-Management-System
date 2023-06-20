@@ -24,6 +24,7 @@ class CarController extends Controller
             'fuel_type' => 'required|string|max:255',
             'fee' => 'required|numeric|min:0',
             'sit' => 'required|integer|min:2|max:16',
+            'stock' => 'required|integer|min:0|max:5',
             'description' => 'required|string',
         ]);
 
@@ -46,6 +47,7 @@ class CarController extends Controller
             "image" =>$imageName,
             "fee" =>$request->fee,
             "sit"=>$request->sit,
+            "stock"=>$request->stock,
             "description" =>$request->description,
         ]);
 

@@ -101,7 +101,7 @@
 
             <!-- Register buttons -->
             <div class="text-center">
-              <p>Not a member? <a href="#!">Register</a></p>
+              <p>Not a member? <a href="{{ route('registration') }}">Register</a></p>
             </div>
           </form>
         </div>

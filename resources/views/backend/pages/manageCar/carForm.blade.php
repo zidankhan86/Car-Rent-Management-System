@@ -72,6 +72,16 @@
       </div><br>
 
       <div>
+        <label for="">Available Cars</label>
+        <input type="number" class="form-control" name="stock" id="" placeholder="Sit">
+        <div>@error('stock')
+
+            <p class="text-danger">{{ $message }}</p>
+
+        @enderror</div>
+      </div><br>
+
+      <div>
         <label for="">Description</label>
         <textarea class="form-control custom-textarea" name="description" id="" placeholder="Description"></textarea>
         <div>@error('description')

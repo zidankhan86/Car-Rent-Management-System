@@ -30,7 +30,11 @@
                         <li><strong style="color: blueviolet">Car Name :</strong>{{$car->car_name}}</li>
                         <li><strong style="color: blueviolet">Sit :</strong>{{$car->sit}}</li>
                     </ul>
-                    <a href="{{ route('booking.details',$car->id) }}" class="primary-btn second-bg">Details</a>
+                    @if($car->stock > 0)
+                                            <a href="{{ route('booking.details', $car->id) }}" class="primary-btn second-bg">Details</a>
+                    @else
+                        <a class="primary-btn second-bg">Car Not Available</a>
+                    @endif
                 </div>
             </div>
 

@@ -7,10 +7,9 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="hero__text">
-                        <h5>Best options for you</h5>
-                        <h2>drive safe & get license</h2>
-                        <a href="#" class="primary-btn">Contact us</a>
-                        <a href="#" class="primary-btn second-bg">See Courses</a>
+                        <h5>Best options rent for you</h5>
+                        <h2>Rent our car & drive safe </h2>
+
                     </div>
                 </div>
             </div>
@@ -82,7 +81,7 @@
     </section>
     <!-- About Video Section End -->
 
-    
+
 
     <!-- Pricing Section Begin -->
     <section class="pricing spad set-bg" data-setbg="{{url ('frontend/img/pricing-bg.jpg') }}">

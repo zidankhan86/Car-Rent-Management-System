@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Book;
 use App\Models\Car;
+use App\Models\Book;
 use App\Models\User;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Validator;
 
 class BookController extends Controller
@@ -49,7 +50,7 @@ if ($validator->fails()) {
             "location" =>$request->location,
 
         ]);
-
+        Alert::toast('We will contact soon','success');
         return redirect()->route('home');
 
     }

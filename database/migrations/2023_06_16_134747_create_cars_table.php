@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('fee');
             $table->string('sit');
             $table->string('description');
+            $table->string('stock');
             $table->timestamps();
         });
 
