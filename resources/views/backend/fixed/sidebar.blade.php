@@ -44,9 +44,9 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                      Booking
                 </a>
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="{{ route('add.driver') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                    Manage Customer
+                    Driver
                 </a>
 
                 <a class="nav-link" href="{{ route('order.report') }}">

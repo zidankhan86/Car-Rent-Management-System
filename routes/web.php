@@ -8,28 +8,21 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\CarRentController;
+use App\Http\Controllers\DriverController;
 use App\Http\Controllers\frontend\HomeController as FrontendHomeController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
+//Routes
+
+//Frontend
 
 Route::get('/',[FrontendHomeController::class,'home'])->name('home');
 Route::get('/car-rent',[CarRentController::class,'carRent'])->name('car.rent');
 
-
 Route::get('/booking-details/{id}',[BookController::class,'bookingDetails'])->name('booking.details');
 
 
-//auth
+//Auth
 Route::get('/login',[AuthController::class,'login'])->name('login');
 Route::post('/login/process',[AuthController::class,'loginProcess'])->name('login.process');
 Route::get('/registration',[AuthController::class,'registration'])->name('registration');
@@ -53,17 +46,15 @@ Route::group(['middleware'=>'auth','admin','prefix'=>'admin'],function(){
 
 
 
-    //Backend
-Route::get('/admin/profile',[AuthController::class,'adminProfile'])->name('admin.profile');
+ //Backend
+ Route::get('/admin/profile',[AuthController::class,'adminProfile'])->name('admin.profile');
 
-
-
-Route::get('/',[HomeController::class,'dashboard'])->name('dashboard');
-Route::get('/add/brand/form',[BrandController::class,'brandForm'])->name('brand.form');
-Route::post('/add/brand/store',[BrandController::class,'brandStore'])->name('brand.store');
-Route::get('/brand/table',[BrandController::class,'brandTable'])->name('brand.table');
-Route::get('/brand/view/{id}',[BrandController::class,'brandView'])->name('brand.view');
-Route::get('/brand/edit/{id}',[BrandController::class,'brandEdit'])->name('brand.edit');
+ Route::get('/',[HomeController::class,'dashboard'])->name('dashboard');
+ Route::get('/add/brand/form',[BrandController::class,'brandForm'])->name('brand.form');
+ Route::post('/add/brand/store',[BrandController::class,'brandStore'])->name('brand.store');
+ Route::get('/brand/table',[BrandController::class,'brandTable'])->name('brand.table');
+ Route::get('/brand/view/{id}',[BrandController::class,'brandView'])->name('brand.view');
+ Route::get('/brand/edit/{id}',[BrandController::class,'brandEdit'])->name('brand.edit');
 
  Route::get('/car/rent/form',[CarController::class,'addCar'])->name('car.form');
  Route::post('/car/rent/form',[CarController::class,'CarStore'])->name('car.store');
@@ -74,11 +65,9 @@ Route::get('/brand/edit/{id}',[BrandController::class,'brandEdit'])->name('brand
 
 
  Route::get('/report',[ReportController::class,'report'])->name('order.report');
-Route::get('/report/search',[ReportController::class,'reportSearch'])->name('order.report.search');
+ Route::get('/report/search',[ReportController::class,'reportSearch'])->name('order.report.search');
 
+ Route::get('/add-driver',[DriverController::class,'addDriver'])->name('add.driver');
 
- //Route::get('/content',[ContentController::class,'contentForm'])->name('content.form');
- //Route::post('/content-store',[ContentController::class,'contentStore'])->name('content.store');
- //Route::get('/content/list',[ContentController::class,'contentList'])->name('content.list');
 });
 

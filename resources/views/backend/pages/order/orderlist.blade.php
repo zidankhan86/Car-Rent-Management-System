@@ -14,7 +14,7 @@
         <th scope="col">City</th>
         <th scope="col">Road</th>
         <th scope="col">Orders Time</th>
-        {{-- <th>Action</th> --}}
+        <th>Assign</th>
       </tr>
     </thead>
     <tbody>
@@ -30,7 +30,9 @@
         <td>{{ $item->city }}</td>
         <td>{{ $item->road }}</td>
         <td>{{ $item->created_at->diffForHumans() }}</td>
-        {{-- <td><a href="" class="btn btn-success">View</a> --}}
+        <td><section>
+
+        </section></td>
         </td>
       </tr>
       @endforeach
