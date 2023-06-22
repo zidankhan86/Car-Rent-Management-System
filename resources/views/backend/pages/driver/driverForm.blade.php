@@ -3,7 +3,7 @@
 
 @section('content')
 <h3 >Add Driver Form</h3><br>
-<form action="" method="post" enctype="multipart/form-data">
+<form action="{{ route('driver.store') }}" method="post" enctype="multipart/form-data">
 
     @csrf
     <div class="form-group">
@@ -14,7 +14,7 @@
 
     <div class="form-group" style="padding: 0 50px;">
         <label for="exampleInputName2">Driver About</label>
-        <input type="text" class="form-control" name="driver_about" id="exampleInputName2" placeholder="Driver About" style="width: 700px; height: 100px;">
+        <input type="text" class="form-control" name="about_driver" id="exampleInputName2" placeholder="Driver About" style="width: 700px; height: 100px;">
       </div><br>
 
 

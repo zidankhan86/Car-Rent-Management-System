@@ -68,6 +68,8 @@ Route::group(['middleware'=>'auth','admin','prefix'=>'admin'],function(){
  Route::get('/report/search',[ReportController::class,'reportSearch'])->name('order.report.search');
 
  Route::get('/add-driver',[DriverController::class,'addDriver'])->name('add.driver');
+ Route::post('/add-driver',[DriverController::class,'DriverStore'])->name('driver.store');
+
 
 });
 
