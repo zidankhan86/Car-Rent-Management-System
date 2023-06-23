@@ -21,6 +21,8 @@ Route::get('/car-rent',[CarRentController::class,'carRent'])->name('car.rent');
 
 Route::get('/booking-details/{id}',[BookController::class,'bookingDetails'])->name('booking.details');
 
+Route::get('/driver/home',[DriverController::class,'DriverHome'])->name('driver.home');
+
 
 //Auth
 Route::get('/login',[AuthController::class,'login'])->name('login');

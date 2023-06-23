@@ -9,7 +9,7 @@ class CarRentController extends Controller
 {
     public function carRent(){
 
-        $cars = Car::all();
+        $cars = Car::simplePaginate(6);
         return view('frontend.pages.rentCar',compact('cars'));
     }
 }

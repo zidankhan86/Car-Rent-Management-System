@@ -33,4 +33,10 @@ class DriverController extends Controller
         return back();
 
     }
+
+    public function DriverHome(){
+
+        $drivers = Driver::simplePaginate(4);
+        return view('frontend.driver.driver',compact('drivers'));
+    }
 }

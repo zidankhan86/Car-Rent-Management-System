@@ -158,6 +158,8 @@
                         </div>
                     </div>
                 </div>
+
+                
                 <div class="col-lg-6">
                     <div class="team__item">
                         <div class="team__item__img">
