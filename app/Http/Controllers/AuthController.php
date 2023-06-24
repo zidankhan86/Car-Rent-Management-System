@@ -94,4 +94,26 @@ class AuthController extends Controller
 
       return view('frontend.search.search',compact('searchResult'));
     }
+
+    public function DriverRegistration(){
+        return view('backend.pages.driverAuth.registration');
+    }
+
+    public function regStores(Request $request){
+
+        //dd($request->all());
+        User::create([
+
+
+            "name"=>$request->name,
+            "address"=>$request->address,
+            "email"=>$request->email,
+            "phone"=>$request->phone,
+            "password"=>encrypt($request->password),
+            "role"=>$request->role
+        ]);
+
+       Alert::toast()->success('Registration','success');
+        return redirect()->route('dashboard');
+    }
 }

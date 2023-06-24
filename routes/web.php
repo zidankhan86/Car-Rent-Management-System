@@ -50,6 +50,8 @@ Route::group(['middleware'=>'auth','admin','prefix'=>'admin'],function(){
 
  //Backend
  Route::get('/admin/profile',[AuthController::class,'adminProfile'])->name('admin.profile');
+ Route::get('/driver-registration',[AuthController::class,'DriverRegistration'])->name('registration.driver');
+ Route::post('/registration/stores',[AuthController::class,'regStores'])->name('reg.stores');
 
  Route::get('/',[HomeController::class,'dashboard'])->name('dashboard');
  Route::get('/add/brand/form',[BrandController::class,'brandForm'])->name('brand.form');

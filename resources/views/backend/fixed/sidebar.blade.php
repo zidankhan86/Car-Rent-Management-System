@@ -44,6 +44,12 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                      Booking
                 </a>
+                <a class="nav-link" href="{{ route('registration.driver') }}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                    Driver Register
+                </a>
+
+
                 <a class="nav-link" href="{{ route('add.driver') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                     Driver
