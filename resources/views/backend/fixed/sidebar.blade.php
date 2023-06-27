@@ -44,6 +44,10 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                      Booking
                 </a>
+
+                @auth
+
+                 @if(auth()->user()->role== 'admin'or'driver')
                 <a class="nav-link" href="{{ route('registration.driver') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                     Driver Register
@@ -54,6 +58,10 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                     Driver
                 </a>
+
+                @endif
+                @endauth
+
 
                 <a class="nav-link" href="{{ route('order.report') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>

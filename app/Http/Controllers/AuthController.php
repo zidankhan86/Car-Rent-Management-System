@@ -19,24 +19,26 @@ class AuthController extends Controller
     public function loginProcess(Request $request){
 
         //dd($request->all());
-            $credential = $request->only(['email','password']);
+        $credentials = $request->only(['email', 'password']);
 
-            if(Auth::attempt($credential))
-            {
-        if(auth()->user()->role == 'admin' or 'customer'){
-            if(auth()->user()->role == 'admin'){
+    if (Auth::attempt($credentials)) {
+        $user = auth()->user();
 
-
-                Alert::toast('Login','success');
-
+        if (in_array($user->role, ['admin', 'customer', 'driver'])) {
+            if (auth()->user()->role == 'admin') {
+                Alert::toast('Login', 'success');
                 return redirect()->route('dashboard');
-            }else{
+            } elseif (auth()->user()->role == 'driver') {
+                Alert::toast('Login', 'success');
+                return redirect()->route('dashboard');
+            } else {
                 return redirect()->route('home');
-
             }
         }
-            }
+    }
 
+    // Authentication failed or invalid role
+    return redirect()->back()->withErrors(['message' => 'Invalid credentials or role.']);
         }
 
         public function registration(){
@@ -106,11 +108,11 @@ class AuthController extends Controller
 
 
             "name"=>$request->name,
-            "address"=>$request->address,
             "email"=>$request->email,
             "phone"=>$request->phone,
-            "password"=>encrypt($request->password),
-            "role"=>$request->role
+            "address"=>$request->address,
+            "password"=>bcrypt($request->password),
+            "role"=>"driver",
         ]);
 
        Alert::toast()->success('Registration','success');

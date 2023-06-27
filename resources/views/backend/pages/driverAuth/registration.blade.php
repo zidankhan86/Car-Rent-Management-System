@@ -88,28 +88,19 @@
 		</select>
     	<input name="phone" class="form-control" placeholder="Phone number" type="text">
     </div> <!-- form-group// -->
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-building"></i> </span>
-		</div>
-		<select class="form-control" name="role">
-			<option selected=""> Select type</option>
-			<option value="driver">Driver</option>
 
-		</select>
-	</div> <!-- form-group end.// -->
+    
+
+    <div>
+        <input type="hidden" name="role">
+    </div>
     <div class="form-group input-group">
     	<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
 		</div>
         <input name="password" class="form-control" placeholder="Create password" type="password">
     </div> <!-- form-group// -->
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-		</div>
-        <input name="password" class="form-control" placeholder="Repeat password" type="password">
-    </div> <!-- form-group// -->
+
 
     <div class="form-group">
         <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
