@@ -31,9 +31,6 @@ Route::get('/registration',[AuthController::class,'registration'])->name('regist
 Route::post('/registration/store',[AuthController::class,'regStore'])->name('reg.store');
 Route::get('/logout',[AuthController::class,'logout'])->name('logout');
 
-Route::get('/driver-registration',[AuthController::class,'DriverRegistration'])->name('registration.driver');
- Route::post('/registration/stores',[AuthController::class,'regStores'])->name('reg.stores');
-
 Route::get('/my/profile',[AuthController::class,'myProfile'])->name('my.profile');
 
 Route::get('/search',[AuthController::class,'search'])->name('user.search');
@@ -53,7 +50,8 @@ Route::group(['middleware'=>'auth','admin','prefix'=>'admin'],function(){
 
  //Backend
  Route::get('/admin/profile',[AuthController::class,'adminProfile'])->name('admin.profile');
-
+ Route::get('/driver-registration',[AuthController::class,'DriverRegistration'])->name('registration.driver');
+ Route::post('/registration/stores',[AuthController::class,'regStores'])->name('reg.stores');
 
  Route::get('/',[HomeController::class,'dashboard'])->name('dashboard');
  Route::get('/add/brand/form',[BrandController::class,'brandForm'])->name('brand.form');
