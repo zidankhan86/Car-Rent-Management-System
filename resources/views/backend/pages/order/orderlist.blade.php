@@ -31,7 +31,7 @@
         <td>{{ $item->road }}</td>
         <td>{{ $item->created_at->diffForHumans() }}</td>
         <td>
-            @if($item->status == 'assigned')
+            @if($item->status == 'Assigned')
             Assigned
         @else
         <a href="{{ route('assigned',$item->id) }}" class="btn btn-success">Assigne</a>
