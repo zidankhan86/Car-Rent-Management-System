@@ -30,10 +30,16 @@
         <td>{{ $item->city }}</td>
         <td>{{ $item->road }}</td>
         <td>{{ $item->created_at->diffForHumans() }}</td>
-        <td><section>
+        <td>
+            @if($item->status == 'assigned')
+            Assigned
+        @else
+        <a href="{{ route('assigned',$item->id) }}" class="btn btn-success">Assigne</a>
+        @endif
+       </td>
 
-        </section></td>
-        </td>
+
+
       </tr>
       @endforeach
     </tbody>

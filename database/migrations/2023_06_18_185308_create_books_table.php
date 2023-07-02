@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('road');
             $table->string('city');
             $table->string('location');
+            $table->string('status');
             $table->timestamps();
         });
     }

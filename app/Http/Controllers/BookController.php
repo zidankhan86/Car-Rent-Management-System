@@ -24,7 +24,7 @@ class BookController extends Controller
 $validator = Validator::make($request->all(), [
     'name' => 'required',
     'phone' => 'required',
-    'from_date' => 'required|date',
+    'from_date' => 'required|date|after_or_equal:'.today()->format('Y-m-d'),
     'to_date' => 'required|date|after:from_date',
     'road' => 'required',
     'city' => 'required',
@@ -48,7 +48,7 @@ if ($validator->fails()) {
             "road" =>$request->road,
             "city" =>$request->city,
             "location" =>$request->location,
-
+            "status" =>'assign',
         ]);
         Alert::toast('We will contact soon','success');
         return redirect()->route('home');
@@ -65,5 +65,16 @@ if ($validator->fails()) {
 
         $userBooking = Book::all();
         return view('backend.pages.order.orderlist',compact('userBooking'));
+    }
+
+    public function approve($id)
+    {
+        //dd($id);
+        $appoint = Book::findOrFail($id);
+        $appoint->update([
+            'status' => 'Assigned',
+        ]);
+       Alert::toast()->success(' Assigned');
+        return redirect()->back();
     }
 }

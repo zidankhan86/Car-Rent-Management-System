@@ -59,7 +59,7 @@
 
                 <a class="nav-link" href="{{ route('add.driver') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                    Driver
+                    Driver Post
                 </a>
 
                 <a class="nav-link" href="{{ route('order.report') }}">
@@ -73,8 +73,12 @@
                 <a class="btn btn-warning" class="nav-link" href="{{ route('order.report') }}">
                     <div class="sb-nav-link-icon">
                     </div>
-                    Rent Assigend(0)
+                    Rent Assigend
+                    @php
+                    $totalBook=App\Models\Book::where('id','1')->count();
+                    @endphp
                 </a>
+
             </div>
 
 
