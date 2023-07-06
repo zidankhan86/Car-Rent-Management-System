@@ -10,7 +10,7 @@
             <div class="col-lg-7 col-md-7 col-sm-7">
                 <div class="section-title">
                     <span>Our Great Team</span>
-                    <h2>Our Instructors</h2>
+                    <h2>Our Drivers</h2>
                 </div>
             </div>
             <div class="col-lg-5 col-md-5 col-sm-5">

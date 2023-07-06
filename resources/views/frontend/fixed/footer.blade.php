@@ -16,7 +16,7 @@
             </div>
             <div class="col-lg-3 col-md-3 col-sm-6">
                 <div class="footer__widget">
-                    <h5>Courses</h5>
+                    <h5>Driving</h5>
                     <ul>
                         <li><a href="#">Winter driving</a></li>
                         <li><a href="#">Program for seniors</a></li>
@@ -43,10 +43,10 @@
                     <div class="footer__logo">
                         <a href="#"><img src="{{url ('frontend/img/footer-logo.png') }}" alt=""></a>
                     </div>
-                    <p>Address : 15 Division Street, New York, NY 12032, United States of America</p>
+                    <p>Address : IUBAT</p>
                     <ul>
-                        <li>Phone : +0 (123) 456789</li>
-                        <li>Email : Kaseo@gmail.com</li>
+                        <li>Phone : 0171234560</li>
+                        <li>Email : CarRent@gmail.com</li>
                         <li>Fax : +8 (123) 456 789</li>
                     </ul>
                 </div>

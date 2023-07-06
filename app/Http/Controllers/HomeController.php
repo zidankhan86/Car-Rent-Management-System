@@ -13,13 +13,13 @@ class HomeController extends Controller
     public function dashboard(){
 
        //Not Yet Done
-       //$totalAssigned = Book::where('status', 'assigned')->count();
+       $totalAssigned = Book::where('status', 'Assigned')->count();
 
        $totalBook = Book::get()->count();
        $totalCar = Car::get()->count();
        $totalUser = User::get()->count();
        $totalBrand = Brand::get()->count();
 
-        return view('backend.pages.home',compact('totalBook','totalCar','totalUser','totalBrand'));
+        return view('backend.pages.home',compact('totalBook','totalCar','totalUser','totalBrand','totalAssigned'));
     }
 }

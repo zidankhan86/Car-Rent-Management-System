@@ -70,12 +70,12 @@
                 @else
 
                 <div>
-                <a class="btn btn-warning" class="nav-link" href="{{ route('order.report') }}">
+                <a class="btn btn-warning" class="nav-link" href="">
                     <div class="sb-nav-link-icon">
                     </div>
                     Rent Assigend
                     @php
-                    $totalBook=App\Models\Book::where('id','1')->count();
+                    $totalBook=App\Models\Book::where('status','Assigned')->count();
                     @endphp
                 </a>
 
