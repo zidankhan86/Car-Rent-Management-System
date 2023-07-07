@@ -27,7 +27,7 @@
         <thead>
         <tr>
             <th scope="col">Id</th>
-            <th scope="col">User ID</th>
+
             <th scope="col">Name</th>
             <th scope="col">Phone</th>
             <th scope="col">City Name</th>
@@ -42,7 +42,7 @@
         @foreach($report as $key=>$order)
         <tr>
             <td>{{$key+1}}</td>
-            <td>{{$order->id}}</td>
+            
             <td>{{$order->name}}</td>
             <td>{{$order->phone}}</td>
             <td>{{$order->city}}</td>
