@@ -124,98 +124,47 @@
     <!-- Pricing Section End -->
 
     <!-- Team Section Begin -->
-    <section class="team spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7 col-md-7 col-sm-7">
-                    <div class="section-title">
-                        <span>Our Great Team</span>
-                        <h2>Our Instructors</h2>
-                    </div>
-                </div>
-                <div class="col-lg-5 col-md-5 col-sm-5">
-                    <div class="team__all">
-                        <a href="#" class="primary-btn second-bg">View all</a>
-                    </div>
+    <!-- Team Section Begin -->
+<section class="team spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-7 col-sm-7">
+                <div class="section-title">
+                    <span>Our Great Team</span>
+                    <h2>Our Drivers</h2>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="team__item">
-                        <div class="team__item__img">
-                            <img src="{{url ('frontend/img/team/team-1.png') }}" alt="">
-                        </div>
-                        <div class="team__item__text">
-                            <h5>DAVID WARNER</h5>
-                            <span>Instructor</span>
-                            <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
-                            <div class="team__item__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-dribbble"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                
-                <div class="col-lg-6">
-                    <div class="team__item">
-                        <div class="team__item__img">
-                            <img src="{{url ('frontend/img/team/team-2.png') }}" alt="">
-                        </div>
-                        <div class="team__item__text">
-                            <h5>DAVID WARNER</h5>
-                            <span>Instructor</span>
-                            <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
-                            <div class="team__item__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-dribbble"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="team__item">
-                        <div class="team__item__img">
-                            <img src="{{url ('frontend/img/team/team-3.png') }}" alt="">
-                        </div>
-                        <div class="team__item__text">
-                            <h5>DAVID WARNER</h5>
-                            <span>Instructor</span>
-                            <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
-                            <div class="team__item__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-dribbble"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="team__item">
-                        <div class="team__item__img">
-                            <img src="{{url ('frontend/img/team/team-4.png') }}" alt="">
-                        </div>
-                        <div class="team__item__text">
-                            <h5>DAVID WARNER</h5>
-                            <span>Instructor</span>
-                            <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
-                            <div class="team__item__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-dribbble"></i></a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-lg-5 col-md-5 col-sm-5">
+                <div class="team__all">
+                    <a href="#" class="primary-btn second-bg">View all</a>
                 </div>
             </div>
         </div>
-    </section>
+        <div class="row">
+            @foreach ($drivers as $driver)
+
+
+
+            <div class="col-lg-6">
+                <div class="team__item">
+                    <div class="team__item__img">
+                        <img width="150" height="150" src="{{ url('/uploads/'.$driver->image) }}" alt="">
+                    </div>
+                    <div class="team__item__text">
+                        <h5>{{ $driver->name }}</h5>
+                        <span>Driver</span>
+                        <p>{{ $driver->about_driver }}</p>
+                        <p>Professional Driver</p>
+                    </div>
+                </div>
+            </div>
+
+            @endforeach
+
+        </div>
+        {{ $drivers->links() }}
+    </div>
+</section>
+<!-- Team Section End -->
     <!-- Team Section End -->
   @endsection

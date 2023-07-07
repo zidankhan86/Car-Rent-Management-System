@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Driver;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class DriverController extends Controller
 {
@@ -30,6 +31,7 @@ class DriverController extends Controller
             "about_driver"=>$request->about_driver,
             "image"=>$imageName,
         ]);
+        Alert::toast()->success('Success! Driver Added ');
         return back();
 
     }
