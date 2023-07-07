@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-lg-2">
                 <div class="header__logo">
-                    <a href="" style="color: rgb(6, 56, 56); font-size: 24px;"><strong>RentCar</strong></a>
+                    <a href="{{ route('home') }}" style="color: rgb(6, 56, 56); font-size: 24px;"><strong>RentCar</strong></a>
                 </div>
             </div>
             <div class="col-lg-5">

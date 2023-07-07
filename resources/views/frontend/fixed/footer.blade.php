@@ -32,7 +32,6 @@
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Drupal Themes</a></li>
-                        <li><a href="#">WordPress Themes</a></li>
                         <li><a href="#">Support</a></li>
                         <li><a href="#">Services</a></li>
                     </ul>
@@ -41,7 +40,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="footer__about">
                     <div class="footer__logo">
-                        <a href="#"><img src="{{url ('frontend/img/footer-logo.png') }}" alt=""></a>
+                        <strong>CarRent</strong>
                     </div>
                     <p>Address : IUBAT</p>
                     <ul>
@@ -56,7 +55,7 @@
             <div class="col-lg-12 text-center">
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 <div class="footer__copyright__text">
-                    <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved<i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">IUBAT</a></p>
+                    <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved<i class="" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">IUBAT</a></p>
                 </div>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </div>
