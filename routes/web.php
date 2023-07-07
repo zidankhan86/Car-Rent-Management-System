@@ -45,6 +45,7 @@ Route::group(['middleware'=>'auth','admin','prefix'=>'admin'],function(){
     Route::post('/booking-store',[BookController::class,'bookingStore'])->name('booking.store');
     Route::get('/booking/list',[BookController::class,'bookingList'])->name('bookings.lists');
     Route::get('/approve/{id}',[BookController::class,'approve'])->name('assigned');
+    Route::get('/confirmed/{id}',[BookController::class,'Confirmed'])->name('Confirmed');
 
 
 

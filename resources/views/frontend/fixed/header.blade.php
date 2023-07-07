@@ -11,14 +11,14 @@
                 <nav class="header__menu">
                     <ul>
                         <li class="active"><a href="{{ route('home') }}">Home</a></li>
-                        <li><a href="{{ ROUTE('driver.home') }}">DriverS</a></li>
+                        <li><a href="{{ route('driver.home') }}">Drivers</a></li>
                         <li><a href="{{ route('car.rent') }}">Cars</a>
 
                         </li>
 
                         @auth
                             @if (auth()->user()->role == 'customer')
-                                <li><a href="{{ route('my.profile') }}">Profile</a></li>
+                                <li><a href="{{ route('my.profile',auth()->user()->id) }}">Profile</a></li>
                                 <li><a href="{{ route('logout') }}">Logout</a></li>
                             @endif
                         @else

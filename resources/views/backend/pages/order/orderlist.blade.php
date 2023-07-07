@@ -31,11 +31,29 @@
         <td>{{ $item->road }}</td>
         <td>{{ $item->created_at->diffForHumans() }}</td>
         <td>
-            @if($item->status == 'Assigned')
-            Assigned
-        @else
-        <a href="{{ route('assigned',$item->id) }}" class="btn btn-success">Assigne</a>
-        @endif
+
+
+
+
+                @if (auth()->user()->role == 'admin')
+            {{-- @if ($item->status == 'Assigned' 'Confiremd') --}}
+
+            @if ($item->status == 'Assigned' || $item->status == 'Confirmed')
+
+                Assigned
+            @else
+                <a href="{{ route('assigned', $item->id) }}" class="btn btn-success">Assign</a>
+            @endif
+            @else
+            @if ($item->status == 'Confirmed')
+                <button class="btn btn-danger">Picked</button> By <strong>{{ auth()->user()->name }}</strong>
+            @else
+                <a href="{{ route('Confirmed', $item->id) }}" class="btn btn-success" @if ($item->status == 'Confirmed') disabled @endif>Pick Ride</a>
+            @endif
+            @endif
+
+
+
        </td>
 
 

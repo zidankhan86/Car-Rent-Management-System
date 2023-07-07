@@ -13,7 +13,9 @@ class HomeController extends Controller
     public function dashboard(){
 
        //Not Yet Done
-       $totalAssigned = Book::where('status', 'Assigned')->count();
+       $books = Book::where('status', 'Assigned')->latest()->get();
+       $totalAssigned = $books->pluck('id')->unique()->count();
+
 
        $totalBook = Book::get()->count();
        $totalCar = Car::get()->count();

@@ -77,4 +77,15 @@ if ($validator->fails()) {
        Alert::toast()->success(' Assigned');
         return redirect()->back();
     }
+
+    public function Confirmed($id)
+    {
+        //dd($id);
+        $appoint = Book::findOrFail($id);
+        $appoint->update([
+            'status' => 'Confirmed',
+        ]);
+       Alert::toast()->success(' Confirmed Ride');
+        return redirect()->back();
+    }
 }

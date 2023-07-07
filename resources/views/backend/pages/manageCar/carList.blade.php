@@ -27,14 +27,9 @@
         <td>{{$item->description}}</td>
 
         <td>
-            @if(auth()->user()->role == 'admin')
+            
             <a href="{{ route('car.edit',$item->id) }}" class="btn btn-success">Edit</a>
             <a href="{{route('car.view',$item->id)}}" class="btn btn-info">View</a>
-            @else
-            <a href="" class="btn btn-info">Confirm Ride</a>
-
-            @endif
-
         </td>
       </tr>
       @endforeach
