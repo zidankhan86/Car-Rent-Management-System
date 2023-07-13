@@ -10,14 +10,10 @@
     @csrf
     <div class="form-group">
       <label for="exampleInputName">Driver Name</label>
-      <input type="text" class="form-control" name="name" id="exampleInputName" aria-describedby="Name" placeholder="Enter Brand Name">
+      <input type="text" class="form-control" name="name" id="exampleInputName" aria-describedby="Name" placeholder="BMW">
 
     </div><br>
 
-    <div class="form-group" style="padding: 0 50px;">
-        <label for="exampleInputName2">Driver About</label>
-        <input type="text" class="form-control" name="about_driver" id="exampleInputName2" placeholder="Driver About" style="width: 700px; height: 100px;">
-      </div><br>
 
 
       <div class="form-group">
@@ -25,6 +21,13 @@
         <input type="file" class="form-control" name="image" id="exampleInputPassword1">
       </div>
       <br>
+
+
+      <div class="form-group" style="padding: 10 10px;">
+        <label for="exampleInputName2">Driver About</label>
+        <input type="text" class="form-control" name="about_driver" id="exampleInputName2" placeholder="Write about dirver here.." style="width: 700px; height: 100px;">
+      </div><br>
+
 
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
