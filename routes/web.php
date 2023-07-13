@@ -51,6 +51,10 @@ Route::group(['middleware'=>'auth','admin','prefix'=>'admin'],function(){
 
 
  //Backend
+
+ Route::group(['middleware'=>'admin'],function(){
+
+
  Route::get('/admin/profile',[AuthController::class,'adminProfile'])->name('admin.profile');
  Route::get('/driver-registration',[AuthController::class,'DriverRegistration'])->name('registration.driver');
  Route::post('/registration/stores',[AuthController::class,'regStores'])->name('reg.stores');
@@ -75,7 +79,7 @@ Route::group(['middleware'=>'auth','admin','prefix'=>'admin'],function(){
 
  Route::get('/add-driver',[DriverController::class,'addDriver'])->name('add.driver');
  Route::post('/add-driver',[DriverController::class,'DriverStore'])->name('driver.store');
-
+});
 
 });
 
