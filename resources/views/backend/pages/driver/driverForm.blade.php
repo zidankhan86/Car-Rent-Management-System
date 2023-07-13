@@ -3,6 +3,8 @@
 
 @section('content')
 <h3 >Add Driver Form</h3><br>
+
+<div class="container">
 <form action="{{ route('driver.store') }}" method="post" enctype="multipart/form-data">
 
     @csrf
@@ -26,5 +28,5 @@
 
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
-
+</div>
   @endsection
