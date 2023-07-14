@@ -166,7 +166,7 @@ mark {
         </div>
         <div class="row gutters-sm">
 
-            <div class="col-sm-12 mb-3">
+            {{-- <div class="col-sm-12 mb-3">
                 <h3 class="text-center">Order Information</h3>
                 <table class="table table-striped">
                     <thead>
@@ -192,7 +192,9 @@ mark {
                         @endforeach
                     </tbody>
                   </table>
-            </div>
+            </div> --}}
+
+
           </div>
 
     </div>
