@@ -72,6 +72,7 @@ Route::group(['middleware'=>'auth','admin','prefix'=>'admin'],function(){
  Route::get('/car/rent/view/{id}',[CarController::class,'CarView'])->name('car.view');
  Route::get('/car/rent/edit/{id}',[CarController::class,'CarEdit'])->name('car.edit');
  Route::post('/car/rent/update/{id}',[CarController::class,'CarUpdate'])->name('car.update');
+ Route::get('/car/rent/delete/{id}',[CarController::class,'Cardelete'])->name('car.delete');
 
 
  Route::get('/report',[ReportController::class,'report'])->name('order.report');

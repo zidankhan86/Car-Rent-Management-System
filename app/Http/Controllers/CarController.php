@@ -113,4 +113,14 @@ class CarController extends Controller
         Alert::toast('Success! Car Updated','success');
         return back();
     }
+
+    public function Cardelete($id){
+        $delete = Car::find($id);
+
+        $delete->delete();
+
+        Alert::toast()->success('Deleted');
+
+        return redirect()->back();
+    }
 }

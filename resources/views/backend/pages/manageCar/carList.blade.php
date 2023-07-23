@@ -27,9 +27,10 @@
         <td>{{$item->description}}</td>
 
         <td>
-            
+
             <a href="{{ route('car.edit',$item->id) }}" class="btn btn-success">Edit</a>
             <a href="{{route('car.view',$item->id)}}" class="btn btn-info">View</a>
+            <a href="{{ route('car.delete',$item->id) }}" class="btn btn-danger">Delete</a>
         </td>
       </tr>
       @endforeach
