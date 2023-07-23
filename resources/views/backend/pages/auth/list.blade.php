@@ -11,6 +11,7 @@
         <th scope="col">Email</th>
         <th scope="col">Phone</th>
         <th scope="col">Address</th>
+        <th scope="col">Actor Type</th>
       </tr>
     </thead>
     <tbody>
@@ -24,7 +25,7 @@
         <td>{{ $item->email}}</td>
         <td>{{ $item->phone}}</td>
         <td>{{ $item->address}}</td>
-
+        <td>{{ $item->role}}</td>
       </tr>
 
       @endforeach
