@@ -49,14 +49,13 @@ Route::group(['middleware'=>'auth','admin','prefix'=>'admin'],function(){
     Route::get('/confirmed/{id}',[BookController::class,'Confirmed'])->name('Confirmed');
 
 
-
-
- //Backend
+    //Backend
 
  Route::group(['middleware'=>'admin'],function(){
 
 
- Route::get('/admin/profile',[AuthController::class,'adminProfile'])->name('admin.profile');
+ Route::get('/admin/profile/{id}',[AuthController::class,'adminProfile'])->name('admin.profile');
+ Route::post('/user/update/{id}', [AuthController::class, 'update'])->name('user.update');
  Route::get('/driver-registration',[AuthController::class,'DriverRegistration'])->name('registration.driver');
  Route::post('/registration/stores',[AuthController::class,'regStores'])->name('reg.stores');
 

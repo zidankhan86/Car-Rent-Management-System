@@ -136,25 +136,32 @@ mark {
                     <h3 class="dark-color">{{ (auth()->user()->name) }}</h3>
 
                     <div class="row about-list">
+<form action="{{ route('user.update',$update->id) }}" method="post">
+    @csrf
                         <div class="col-md-6">
                             <div class="media">
                                 <label>Name</label>
-                                <p>{{ (auth()->user()->name) }}</p>
+
+                                <input type="text" value="{{ (auth()->user()->name) }}" name="name">
                             </div>
                             <div class="media">
                                 <label>Phone</label>
-                                <p>{{ (auth()->user()->phone) }}</p>
+
+                                <input type="tel" value="{{ (auth()->user()->phone) }}" name="phone">
                             </div>
                             <div class="media">
                                 <label>Email</label>
-                                <p>{{ (auth()->user()->email) }}</p>
+
+                                <input type="text" value="{{ (auth()->user()->email) }}" name="email">
                             </div>
                             <div class="media">
                                 <label>Address</label>
-                                <p>{{ (auth()->user()->address) }}</p>
+                                <input type="text" value="{{ (auth()->user()->address) }}" name="address" >
                             </div>
                         </div>
 
+                        <div><button type="submit">update</button></div>
+                    </form>
                     </div>
                 </div>
             </div>
@@ -166,7 +173,7 @@ mark {
         </div>
 
 
-       
+
 </section>
 
 @endsection

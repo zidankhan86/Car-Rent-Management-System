@@ -86,8 +86,10 @@ class AuthController extends Controller
         return view('frontend.profile.profile',compact('order','update'));
     }
 
-    public function adminProfile(){
-        return view('backend.pages.profile.profile');
+    public function adminProfile($id){
+
+            $update=User::find($id);
+        return view('backend.pages.profile.profile',compact('update'));
     }
 
     public function search(Request $request)
