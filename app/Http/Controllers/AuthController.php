@@ -145,4 +145,10 @@ class AuthController extends Controller
         Alert::toast()->success('Profile Update Success');
         return redirect()->back();
     }
+
+    public function userList(){
+
+        $list = User::all();
+        return view('backend.pages.auth.list',compact('list'));
+    }
 }

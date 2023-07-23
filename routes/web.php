@@ -58,6 +58,7 @@ Route::group(['middleware'=>'auth','admin','prefix'=>'admin'],function(){
  Route::post('/user/update/{id}', [AuthController::class, 'update'])->name('user.update');
  Route::get('/driver-registration',[AuthController::class,'DriverRegistration'])->name('registration.driver');
  Route::post('/registration/stores',[AuthController::class,'regStores'])->name('reg.stores');
+ Route::get('/user/list',[AuthController::class,'userList'])->name('user.list');
 
  Route::get('/',[HomeController::class,'dashboard'])->name('dashboard');
  Route::get('/add/brand/form',[BrandController::class,'brandForm'])->name('brand.form');
