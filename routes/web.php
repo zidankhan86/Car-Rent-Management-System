@@ -32,7 +32,7 @@ Route::post('/registration/store',[AuthController::class,'regStore'])->name('reg
 Route::get('/logout',[AuthController::class,'logout'])->name('logout');
 
 Route::get('/my/profile/{id}',[AuthController::class,'myProfile'])->name('my.profile');
-// Route::get('/my/profile/edit/{id}',[AuthController::class,'myProfileEdit'])->name('my.profile.edit');
+
 Route::post('/user/update/{id}', [AuthController::class, 'update'])->name('user.update');
 
 Route::get('/search',[AuthController::class,'search'])->name('user.search');
