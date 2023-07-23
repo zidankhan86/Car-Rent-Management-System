@@ -79,10 +79,11 @@ class AuthController extends Controller
 
     }
 
-    public function myProfile(){
+    public function myProfile($id){
 
         $order = Book::all();
-        return view('frontend.profile.profile',compact('order'));
+        $update =  User::find($id);
+        return view('frontend.profile.profile',compact('order','update'));
     }
 
     public function adminProfile(){
@@ -117,5 +118,29 @@ class AuthController extends Controller
 
        Alert::toast()->success('Registration','success');
         return redirect()->route('dashboard');
+    }
+
+    public function myProfileEdit($id){
+
+        $edit =  User::find($id);
+        return view('frontend.profile.edit',compact('edit'));
+    }
+
+    public function update(Request $request ,$id)
+    {
+        $update = User::find($id);
+
+       // dd($request->all());
+        $update->update([
+
+            "name"=>$request->name,
+            "phone"=>$request->phone,
+            "email"=>$request->email,
+            "address"=>$request->address,
+
+
+        ]);
+        Alert::toast()->success('Profile Update Success');
+        return redirect()->back();
     }
 }

@@ -132,47 +132,31 @@ mark {
     <div class="container">
         <div class="row align-items-center flex-row-reverse">
             <div class="col-lg-6">
-
-                <form action="{{ route('user.update',$update->id) }}" method="post">
-                    @csrf
                 <div class="about-text go-to">
                     <h3 class="dark-color">{{ (auth()->user()->name) }}</h3>
-
-
 
                     <div class="row about-list">
                         <div class="col-md-6">
                             <div class="media">
                                 <label>Name</label>
-
-                                <input type="text" value="{{ (auth()->user()->name)  }}" name="name">
+                                <p>{{ (auth()->user()->name) }}</p>
                             </div>
                             <div class="media">
                                 <label>Phone</label>
-
-                                <input type="tel" value="{{ (auth()->user()->phone) }}" name="phone">
+                                <p>{{ (auth()->user()->phone) }}</p>
                             </div>
                             <div class="media">
                                 <label>Email</label>
-
-                                <input type="text" value="{{ (auth()->user()->email) }}" name="email">
+                                <p>{{ (auth()->user()->email) }}</p>
                             </div>
                             <div class="media">
                                 <label>Address</label>
-
-                                <input type="text" value="{{ (auth()->user()->address) }}" name="address">
+                                <p>{{ (auth()->user()->address) }}</p>
                             </div>
                         </div>
 
-
-
-
-
                     </div>
-
-                    <div><button type="submit">Update</button></div>
                 </div>
-            </form>
             </div>
             <div class="col-lg-6">
                 <div class="about-avatar">
