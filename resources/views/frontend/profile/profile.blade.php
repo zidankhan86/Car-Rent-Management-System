@@ -133,7 +133,7 @@ mark {
         <div class="row align-items-center flex-row-reverse">
             <div class="col-lg-6">
 
-                <form action="{{ route('user.update',$update->id) }}" method="post">
+                <form action="{{ route('user.updated',$update->id) }}" method="post">
                     @csrf
                 <div class="about-text go-to">
                     <h3 class="dark-color">{{ (auth()->user()->name) }}</h3>
@@ -162,6 +162,17 @@ mark {
 
                                 <input type="text" value="{{ (auth()->user()->address) }}" name="address">
                             </div>
+
+                            <div class="media">
+                                <label>Password</label>
+                                <input type="password" name="password">
+                            </div>
+
+                            <div class="media">
+                                <label>Confirm Password</label>
+                                <input type="password" name="password_confirmation">
+                            </div>
+
                         </div>
 
 

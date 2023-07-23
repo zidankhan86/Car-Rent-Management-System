@@ -6,8 +6,10 @@ use App\Models\Car;
 use App\Models\Book;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
 {
@@ -132,7 +134,7 @@ class AuthController extends Controller
     {
         $update = User::find($id);
 
-       // dd($request->all());
+       //dd($request->all());
         $update->update([
 
             "name"=>$request->name,
@@ -151,4 +153,58 @@ class AuthController extends Controller
         $list = User::all();
         return view('backend.pages.auth.list',compact('list'));
     }
+
+    // public function updated(Request $request ,$id){
+
+
+    //     $update = User::find($id);
+
+
+
+    //     $update->updated([
+
+    //         "name"=>$request->name,
+    //         "phone"=>$request->phone,
+    //         "email"=>$request->email,
+    //         "address"=>$request->address,
+    //         "password"=>bcrypt($request->password)
+
+    //     ]);
+    //     Alert::toast()->success('Profile Update Success');
+    //     return redirect()->back();
+
+    // }
+
+    public function updated(Request $request, $id)
+{
+    // Validate the incoming request data
+    $validator = Validator::make($request->all(), [
+        'name' => 'required|string|max:255',
+        'phone' => 'required|string|max:15',
+        'email' => ['required', 'email', 'max:255', Rule::unique('users')->ignore($id)],
+        'address' => 'required|string|max:255',
+        'password' => 'string|min:5|confirmed', // Password should match the 'password_confirmation' field
+    ]);
+
+    // If validation fails, redirect back with error messages
+    if ($validator->fails()) {
+        return redirect()->back()->withErrors($validator)->withInput();
+    }
+
+    // Validation passed, update the user profile
+    $user = User::findOrFail($id);
+    $user->name = $request->input('name');
+    $user->phone = $request->input('phone');
+    $user->email = $request->input('email');
+    $user->address = $request->input('address');
+
+    if ($request->filled('password')) {
+        $user->password = bcrypt($request->input('password'));
+    }
+
+    $user->save();
+
+    Alert::toast()->success('Profile Update Success');
+    return redirect()->back();
+}
 }

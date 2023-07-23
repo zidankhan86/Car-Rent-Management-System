@@ -33,7 +33,7 @@ Route::get('/logout',[AuthController::class,'logout'])->name('logout');
 
 Route::get('/my/profile/{id}',[AuthController::class,'myProfile'])->name('my.profile');
 
-Route::post('/user/update/{id}', [AuthController::class, 'update'])->name('user.update');
+Route::post('/user/updated/{id}', [AuthController::class, 'updated'])->name('user.updated');
 
 Route::get('/search',[AuthController::class,'search'])->name('user.search');
 
