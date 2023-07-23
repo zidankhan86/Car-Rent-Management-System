@@ -53,6 +53,16 @@ public function brandEdit($id){
     return view('backend.pages.brand.brandEdit',compact('brands'));
 }
 
+public function brandDelete($id){
 
+    $delete = Brand::find($id);
+
+        $delete->delete();
+
+
+    Alert::toast()->success('deleted');
+
+    return back();
+}
 
 }
