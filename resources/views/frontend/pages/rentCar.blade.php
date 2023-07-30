@@ -28,7 +28,8 @@
                         <li><strong style="color: blueviolet">Brand :</strong> {{ $car->CarRelation->brand_name }}</li>
                         <li><strong style="color: blueviolet">Rent Fee :</strong> {{ $car->fee }} BDT/day </li>
                         <li><strong style="color: blueviolet">Car Name :</strong>{{$car->car_name}}</li>
-                        <li><strong style="color: blueviolet">Sit :</strong>{{$car->sit}}</li>
+                        <li><strong style="color: blueviolet">Sit: </strong>{{$car->sit}}</li>
+                        <li><strong style="color: blueviolet">Availeable Cars: </strong>{{$car->stock}}</li>
                     </ul>
                     @if($car->stock > 0)
                                             <a href="{{ route('booking.details', $car->id) }}" class="primary-btn second-bg">Details</a>
