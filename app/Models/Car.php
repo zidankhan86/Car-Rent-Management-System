@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Book;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Car extends Model
 {
@@ -12,5 +13,10 @@ class Car extends Model
 
     public function CarRelation(){
         return $this->belongsTo(Brand::class,'brand_id','id');
+    }
+
+    public function bookings()
+    {
+        return $this->hasMany(Book::class);
     }
 }

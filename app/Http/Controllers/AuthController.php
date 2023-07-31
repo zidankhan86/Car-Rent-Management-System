@@ -83,7 +83,11 @@ class AuthController extends Controller
 
     public function myProfile($id){
 
-        $order = Book::all();
+        $order = Book::with('UserRelation','car')
+        ->where('user_id',auth()->user()->id)
+        ->get();
+
+        // $order = Book::all();
         $update =  User::find($id);
         return view('frontend.profile.profile',compact('order','update'));
     }
