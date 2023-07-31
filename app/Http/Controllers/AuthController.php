@@ -75,8 +75,8 @@ class AuthController extends Controller
         public function logout(){
             Auth::logout();
 
-            // Alert()->success('Success','Logout');
-            Alert::success(' Logout','success');
+
+           toast()->success(' Logout');
             return redirect()->route('home');
 
     }
@@ -87,7 +87,7 @@ class AuthController extends Controller
         ->where('user_id',auth()->user()->id)
         ->get();
 
-        
+
         $update =  User::find($id);
         return view('frontend.profile.profile',compact('order','update'));
     }
